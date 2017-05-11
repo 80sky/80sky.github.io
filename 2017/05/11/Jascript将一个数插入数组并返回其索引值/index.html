@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>Jascript将一个数插入数组并返回其索引值 | 80Sky</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="实现思路实现上述功能，大致思路分为下面几个步骤：  可以通过push()或者unshift(),把参数num放到arr中 对数组arr进行排序，在过sort()将数组由小到大做升序排序 使用indexOf()找出num在数组arr中的index(或者使用for循环) 传回index  排序函数123456789function Compare(a,b)&amp;#123;  if(a &amp;lt; b)&amp;#1">
+<meta name="keywords" content="js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Jascript将一个数插入数组并返回其索引值">
+<meta property="og:url" content="http://80sky.github.io/2017/05/11/Jascript将一个数插入数组并返回其索引值/index.html">
+<meta property="og:site_name" content="80Sky">
+<meta property="og:description" content="实现思路实现上述功能，大致思路分为下面几个步骤：  可以通过push()或者unshift(),把参数num放到arr中 对数组arr进行排序，在过sort()将数组由小到大做升序排序 使用indexOf()找出num在数组arr中的index(或者使用for循环) 传回index  排序函数123456789function Compare(a,b)&amp;#123;  if(a &amp;lt; b)&amp;#1">
+<meta property="og:updated_time" content="2016-09-22T08:28:30.754Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Jascript将一个数插入数组并返回其索引值">
+<meta name="twitter:description" content="实现思路实现上述功能，大致思路分为下面几个步骤：  可以通过push()或者unshift(),把参数num放到arr中 对数组arr进行排序，在过sort()将数组由小到大做升序排序 使用indexOf()找出num在数组arr中的index(或者使用for循环) 传回index  排序函数123456789function Compare(a,b)&amp;#123;  if(a &amp;lt; b)&amp;#1">
+  
+    <link rel="alternative" href="/atom.xml" title="80Sky" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/favicon.ico">
+  
+  <script src="/style.js"></script>
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="/images/header.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">80Sky</a></h1>
+		</hgroup>
+
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/resume">简历</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">友链</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="3" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/80sky" title="github">github</a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/" title="weibo">weibo</a>
+		        
+					<a class="rss" target="_blank" href="#" title="rss">rss</a>
+		        
+					<a class="zhihu" target="_blank" href="https://www.zhihu.com/" title="zhihu">zhihu</a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">80Sky</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="/images/header.jpg" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">80Sky</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/resume">简历</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/80sky" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-Jascript将一个数插入数组并返回其索引值" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Jascript将一个数插入数组并返回其索引值
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="实现思路"><a href="#实现思路" class="headerlink" title="实现思路"></a>实现思路</h3><p>实现上述功能，大致思路分为下面几个步骤：</p>
+<ul>
+<li>可以通过push()或者unshift(),把参数num放到arr中</li>
+<li>对数组arr进行排序，在过sort()将数组由小到大做升序排序</li>
+<li>使用indexOf()找出num在数组arr中的index(或者使用for循环)</li>
+<li>传回index</li>
+</ul>
+<h4 id="排序函数"><a href="#排序函数" class="headerlink" title="排序函数"></a>排序函数</h4><pre><code><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> Compare(a,b)&#123;</div><div class="line">  <span class="keyword">if</span>(a &lt; b)&#123;</div><div class="line">    <span class="built_in">return</span> -1;  // a排在b的前面</div><div class="line">  &#125;<span class="keyword">else</span>  <span class="keyword">if</span>(a &gt; b)&#123;</div><div class="line">    <span class="built_in">return</span> 1;   // a排在b的后面</div><div class="line">  &#125;<span class="keyword">else</span>&#123;</div><div class="line">    <span class="built_in">return</span> 0;   // a和b的位置保持不变</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</code></pre><h4 id="测试用例"><a href="#测试用例" class="headerlink" title="测试用例"></a>测试用例</h4><pre><code><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">where</span>([1,2,3,4], 1.5)将返回1</div><div class="line"><span class="built_in">where</span>([20,3,5],19)将返回2</div><div class="line"><span class="built_in">where</span>([40,60],50)将返回1</div></pre></td></tr></table></figure>
+</code></pre><h4 id="几种实现方法："><a href="#几种实现方法：" class="headerlink" title="几种实现方法："></a>几种实现方法：</h4><p>  方法一：</p>
+<pre><code><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> <span class="built_in">where</span>(arr,num)&#123;</div><div class="line">  arr.push(num);</div><div class="line">  arr.sort(Compare);</div><div class="line">  <span class="keyword">for</span>(var i= 0, len = arr.length; i&lt; len;i++)&#123;</div><div class="line">    <span class="keyword">if</span>(arr[i] == num)&#123;</div><div class="line">      <span class="built_in">return</span> i;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">console.log(<span class="built_in">where</span>([1,2,3,4], 1.5));</div><div class="line">console.log(<span class="built_in">where</span>([20,3,5],19));</div><div class="line">console.log(<span class="built_in">where</span>([40,60],50));</div></pre></td></tr></table></figure>
+</code></pre><p>  方法二：</p>
+<pre><code><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> <span class="built_in">where</span>(arr,num)&#123;</div><div class="line">  arr.push(num);</div><div class="line">  arr.sort(Compare);</div><div class="line">  <span class="built_in">return</span> arr.indexOf(num);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</code></pre><p>  方法三: </p>
+<pre><code><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> <span class="built_in">where</span>(arr,num)&#123;</div><div class="line">  arr.sort(Compare);</div><div class="line">  <span class="keyword">for</span>(var i <span class="keyword">in</span> arr)&#123;</div><div class="line">    <span class="keyword">if</span>(arr[i] &gt;= num)&#123;</div><div class="line">      <span class="built_in">return</span> parseInt(i);</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  <span class="built_in">return</span> arr.length;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</code></pre><p>  方法四:</p>
+<pre><code><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span>  <span class="built_in">where</span>(arr,num)&#123;</div><div class="line">  arr.sort(Compare);</div><div class="line">  <span class="keyword">for</span>(var i= 0,len=arr.length;i&lt;len;i++)&#123;</div><div class="line">    <span class="keyword">if</span>(arr[i] &gt;= num)&#123;</div><div class="line">      <span class="built_in">return</span> arr.indexOf(arr[i]);</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  <span class="built_in">return</span> arr.length;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</code></pre><p>  方法五: </p>
+<pre><code><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> <span class="built_in">where</span>(arr,num)&#123;</div><div class="line">  arr.sort(Compare);</div><div class="line">  var count = 0;</div><div class="line">  <span class="keyword">for</span>(var i = 0,len = arr.length;i&lt;len;i++)&#123;</div><div class="line">    <span class="keyword">if</span>(arr[i] &lt; num)&#123;</div><div class="line">      count ++ ;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  <span class="built_in">return</span> count;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</code></pre>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2017/05/11/Jascript将一个数插入数组并返回其索引值/" class="archive-article-date">
+  	<time datetime="2017-05-11T00:57:15.787Z" itemprop="datePublished"><i class="icon-clock"></i>2017-05-11</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/05/11/JavaScript实现快速排序/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          JavaScript实现快速排序
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/05/11/css实现倾斜的三角/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">css实现倾斜的三角</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 80Sky
+    	</div>
+      	<div class="footer-right">
+      		Copyright@ by 80Sky
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/"
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/canvas/" style="font-size: 16.67px;">canvas</a> <a href="/tags/css/" style="font-size: 13.33px;">css</a> <a href="/tags/css3/" style="font-size: 16.67px;">css3</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/html5/" style="font-size: 13.33px;">html5</a> <a href="/tags/jQuery/" style="font-size: 10px;">jQuery</a> <a href="/tags/js/" style="font-size: 20px;">js</a> <a href="/tags/面试/" style="font-size: 10px;">面试</a>
+    			</div>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+  			<div class="friends-wrap" id="js-friends">
+  			
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://80sky.github.io/">友情链接1</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://80sky.github.io/">友情链接2</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://80sky.github.io/">友情链接3</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://80sky.github.io/">友情链接4</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://80sky.github.io/">友情链接5</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://80sky.github.io/">友情链接6</a>
+  	        
+  	        </div>
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">QQ296594402&lt;br&gt;&lt;br&gt;裥單嚸&lt;br&gt;裥單生活</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>

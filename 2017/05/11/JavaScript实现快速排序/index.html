@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>JavaScript实现快速排序 | 80Sky</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="基本思想快速排序使用 分治法(Divide and conquer)策略(即分而治之，各个击破)把一个序列(list)分为两个子序列(sub-lists)。其基本步骤如下:  从数列中挑出一个元素，称为 基准(pivot)。 重新排序数列，所有小于基准的元素，都移到基准的左边；所有大于基准的元素都移到基准的右边。这个分区结束之后，该基准处于数列的中间位置，称为 分区(partition)操作。 对">
+<meta name="keywords" content="js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript实现快速排序">
+<meta property="og:url" content="http://80sky.github.io/2017/05/11/JavaScript实现快速排序/index.html">
+<meta property="og:site_name" content="80Sky">
+<meta property="og:description" content="基本思想快速排序使用 分治法(Divide and conquer)策略(即分而治之，各个击破)把一个序列(list)分为两个子序列(sub-lists)。其基本步骤如下:  从数列中挑出一个元素，称为 基准(pivot)。 重新排序数列，所有小于基准的元素，都移到基准的左边；所有大于基准的元素都移到基准的右边。这个分区结束之后，该基准处于数列的中间位置，称为 分区(partition)操作。 对">
+<meta property="og:updated_time" content="2016-09-22T08:28:38.584Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript实现快速排序">
+<meta name="twitter:description" content="基本思想快速排序使用 分治法(Divide and conquer)策略(即分而治之，各个击破)把一个序列(list)分为两个子序列(sub-lists)。其基本步骤如下:  从数列中挑出一个元素，称为 基准(pivot)。 重新排序数列，所有小于基准的元素，都移到基准的左边；所有大于基准的元素都移到基准的右边。这个分区结束之后，该基准处于数列的中间位置，称为 分区(partition)操作。 对">
+  
+    <link rel="alternative" href="/atom.xml" title="80Sky" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/favicon.ico">
+  
+  <script src="/style.js"></script>
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="/images/header.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">80Sky</a></h1>
+		</hgroup>
+
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/resume">简历</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">友链</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="3" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/80sky" title="github">github</a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/" title="weibo">weibo</a>
+		        
+					<a class="rss" target="_blank" href="#" title="rss">rss</a>
+		        
+					<a class="zhihu" target="_blank" href="https://www.zhihu.com/" title="zhihu">zhihu</a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">80Sky</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="/images/header.jpg" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">80Sky</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/resume">简历</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/80sky" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-JavaScript实现快速排序" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      JavaScript实现快速排序
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="基本思想"><a href="#基本思想" class="headerlink" title="基本思想"></a>基本思想</h3><p>快速排序使用 分治法(Divide and conquer)策略(即分而治之，各个击破)把一个序列(list)分为两个子序列(sub-lists)。其基本步骤如下:</p>
+<ul>
+<li>从数列中挑出一个元素，称为 基准(pivot)。</li>
+<li>重新排序数列，所有小于基准的元素，都移到基准的左边；所有大于基准的元素都移到基准的右边。这个分区结束之后，该基准处于数列的中间位置，称为 分区(partition)操作。</li>
+<li>对基准左边和右边的两个子集，进行递归操作，即不断重复第一步和第二步。直到所有子集只剩下一个元素为止。</li>
+</ul>
+<h4 id="示例说明"><a href="#示例说明" class="headerlink" title="示例说明"></a>示例说明</h4><ul>
+<li><p>下面我们举个示例进行排序说明，数列为[8,7,0,7,5,2,5,3,1]</p>
+<p>第一步: 基准值选取。基准值可以任意选取，便于理解，这里我们选择中间值5作为基准。<br>[8,7,0,7, 5, 2,5,3,1]</p>
+<p>第二步: 进行分区操作。按照顺序将每个元素与基准进行比较，想成两个子集，大于5与小于5.<br>[0,2,5,3,1, 5, 8,7,7]</p>
+<p>第三步，递归操作。对两个子集不断重复第一步和第二步，直到所有子集只剩下一个元素为止。<br>[0,2, 5, 3,1] 5 [8, 7, 7]<br>[0,2,3,1, 5 ] 5 [7, 7, 8]<br>[0, 2, 3,1]5,5,7, 7, 8<br>[0,1, 2, 3] 5, 5, 7, 7, 8<br>[0,1,2,3,5,5,7,7,8]</p>
+</li>
+</ul>
+<h4 id="实现步骤"><a href="#实现步骤" class="headerlink" title="实现步骤"></a>实现步骤</h4><p>  第一步: 定义函数quicksort,参数为一个数组。</p>
+<pre><code><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var quicksort = <span class="keyword">function</span> (arr) &#123;</div><div class="line"></div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+</code></pre><p>  第二步: 检查数组个数，小于等于1，则返回。</p>
+<pre><code><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var quicksort = <span class="keyword">function</span> (arr) &#123;</div><div class="line">  <span class="keyword">if</span>(arr.length &lt; 1)&#123;</div><div class="line">    <span class="built_in">return</span> arr;</div><div class="line">  &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+</code></pre><p>  第三步: 进行基准选择，定义两个空数组进行左右两个子集元素的存放。</p>
+<pre><code><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">var quicksort = <span class="keyword">function</span> (arr) &#123;</div><div class="line">  <span class="keyword">if</span>(arr.length &lt; 1)&#123;</div><div class="line">    <span class="built_in">return</span> arr;</div><div class="line">  &#125;</div><div class="line">  var pivotIndex = Math.floor(arr.length / 2);</div><div class="line">  var pivot = arr.splice(pivotIndex,1)[0];</div><div class="line">  var left = [];</div><div class="line">  var right = [];</div><div class="line">  <span class="keyword">for</span>(var i= 0;i&lt;arr.length;i++)&#123;</div><div class="line">    <span class="keyword">if</span>(arr[i] &lt; pivot)&#123;</div><div class="line">      left.push(arr[i]);</div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">      right.push(arr[i]);</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+</code></pre><p>  第四步: 递归操作。对两个子集不断重复第一步和第二步，直到所有子集只剩下一个元素为止。</p>
+<pre><code><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">var quicksort = <span class="keyword">function</span> (arr) &#123;</div><div class="line">  <span class="keyword">if</span>(arr.length &lt; 1)&#123;</div><div class="line">    <span class="built_in">return</span> arr;</div><div class="line">  &#125;</div><div class="line">  var pivotIndex = Math.floor(arr.length / 2);</div><div class="line">  var pivot = arr.splice(pivotIndex,1)[0];    var left = [];</div><div class="line">  var right = [];</div><div class="line">  <span class="keyword">for</span>(var i=0;i&lt;arr.length;i++)&#123;</div><div class="line">    <span class="keyword">if</span>(arr[i]&lt; pivot)&#123;</div><div class="line">      left.push(arr[i]);</div><div class="line">    &#125;<span class="keyword">else</span> &#123;</div><div class="line">      right.push(arr[i]);</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  <span class="built_in">return</span> quicksort(left).concat([pivot],quicksort(right));</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+</code></pre><p>  第五步: quicksort函数的调用</p>
+<pre><code><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var array = [8,7,0,7,5,2,5,3,1];</div><div class="line">var array1 = Math.floor(array.length / 2);</div><div class="line">console.log(quicksort(array));</div></pre></td></tr></table></figure>
+</code></pre>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2017/05/11/JavaScript实现快速排序/" class="archive-article-date">
+  	<time datetime="2017-05-11T00:57:15.789Z" itemprop="datePublished"><i class="icon-clock"></i>2017-05-11</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/05/11/javascript数组的知识点讲解/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          javascript数组的知识点讲解
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/05/11/Jascript将一个数插入数组并返回其索引值/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Jascript将一个数插入数组并返回其索引值</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 80Sky
+    	</div>
+      	<div class="footer-right">
+      		Copyright@ by 80Sky
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/"
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/canvas/" style="font-size: 16.67px;">canvas</a> <a href="/tags/css/" style="font-size: 13.33px;">css</a> <a href="/tags/css3/" style="font-size: 16.67px;">css3</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/html5/" style="font-size: 13.33px;">html5</a> <a href="/tags/jQuery/" style="font-size: 10px;">jQuery</a> <a href="/tags/js/" style="font-size: 20px;">js</a> <a href="/tags/面试/" style="font-size: 10px;">面试</a>
+    			</div>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+  			<div class="friends-wrap" id="js-friends">
+  			
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://80sky.github.io/">友情链接1</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://80sky.github.io/">友情链接2</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://80sky.github.io/">友情链接3</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://80sky.github.io/">友情链接4</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://80sky.github.io/">友情链接5</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://80sky.github.io/">友情链接6</a>
+  	        
+  	        </div>
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">QQ296594402&lt;br&gt;&lt;br&gt;裥單嚸&lt;br&gt;裥單生活</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>

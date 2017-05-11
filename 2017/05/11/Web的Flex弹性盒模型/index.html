@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>Web的Flex弹性盒模型 | 80Sky</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="[ flex ]12345678910111213141516171819202122&amp;lt;style&amp;gt;	.demo &amp;#123;	    color: #fff;	    display: -webkit-flex;	    text-align: center;	&amp;#125;&amp;lt;/style&amp;gt;&amp;lt;div class=&quot;demo&quot;&amp;gt;	&amp;lt;div class=&quot;it">
+<meta name="keywords" content="css3">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Web的Flex弹性盒模型">
+<meta property="og:url" content="http://80sky.github.io/2017/05/11/Web的Flex弹性盒模型/index.html">
+<meta property="og:site_name" content="80Sky">
+<meta property="og:description" content="[ flex ]12345678910111213141516171819202122&amp;lt;style&amp;gt;	.demo &amp;#123;	    color: #fff;	    display: -webkit-flex;	    text-align: center;	&amp;#125;&amp;lt;/style&amp;gt;&amp;lt;div class=&quot;demo&quot;&amp;gt;	&amp;lt;div class=&quot;it">
+<meta property="og:updated_time" content="2016-09-26T07:49:42.286Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Web的Flex弹性盒模型">
+<meta name="twitter:description" content="[ flex ]12345678910111213141516171819202122&amp;lt;style&amp;gt;	.demo &amp;#123;	    color: #fff;	    display: -webkit-flex;	    text-align: center;	&amp;#125;&amp;lt;/style&amp;gt;&amp;lt;div class=&quot;demo&quot;&amp;gt;	&amp;lt;div class=&quot;it">
+  
+    <link rel="alternative" href="/atom.xml" title="80Sky" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/favicon.ico">
+  
+  <script src="/style.js"></script>
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="/images/header.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">80Sky</a></h1>
+		</hgroup>
+
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/resume">简历</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">友链</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="3" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/80sky" title="github">github</a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/" title="weibo">weibo</a>
+		        
+					<a class="rss" target="_blank" href="#" title="rss">rss</a>
+		        
+					<a class="zhihu" target="_blank" href="https://www.zhihu.com/" title="zhihu">zhihu</a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">80Sky</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="/images/header.jpg" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">80Sky</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/resume">简历</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/80sky" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-Web的Flex弹性盒模型" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Web的Flex弹性盒模型
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="flex"><a href="#flex" class="headerlink" title="[ flex ]"></a>[ flex ]</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;style&gt;</div><div class="line">	.demo &#123;</div><div class="line">	    color: <span class="comment">#fff;</span></div><div class="line">	    display: -webkit-flex;</div><div class="line">	    text-align: center;</div><div class="line">	&#125;</div><div class="line">&lt;/style&gt;</div><div class="line">&lt;div class=<span class="string">"demo"</span>&gt;</div><div class="line">	&lt;div class=<span class="string">"item"</span> style=<span class="string">"width:100px"</span>&gt;width:100px;&lt;/div&gt;</div><div class="line">	&lt;div class=<span class="string">"item"</span> style=<span class="string">"flex:2"</span>&gt;flex: 2;&lt;/div&gt;</div><div class="line">	&lt;div class=<span class="string">"item"</span> style=<span class="string">"flex:1"</span>&gt;flex: 1;&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;div class=<span class="string">"demo"</span>&gt;</div><div class="line">	&lt;div class=<span class="string">"item"</span> style=<span class="string">"margin-right:10px;"</span>&gt;</div><div class="line">		&lt;span&gt;width:150px;&lt;/span&gt; &lt;span&gt;margin-right:10px;&lt;/span&gt;</div><div class="line">	&lt;/div&gt;</div><div class="line">	&lt;div class=<span class="string">"item"</span> style=<span class="string">"flex:1"</span>&gt;flex: 1;&lt;/div&gt;</div><div class="line">	&lt;div class=<span class="string">"item"</span> style=<span class="string">"margin-left:10px;"</span>&gt;</div><div class="line">		&lt;span&gt;width:150px;&lt;/span&gt; &lt;span&gt;margin-left:10px;&lt;/span&gt;&lt;/div&gt;</div><div class="line">	&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<h3 id="flex-direction"><a href="#flex-direction" class="headerlink" title="[ flex-direction ]"></a>[ flex-direction ]</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;style&gt;</div><div class="line">	.demo &#123;</div><div class="line">	    color: <span class="comment">#fff;</span></div><div class="line">	    display: -webkit-flex;</div><div class="line">	    text-align: center;</div><div class="line">	&#125;</div><div class="line">	.demo-row &#123;</div><div class="line">	    flex-direction: row; /*default*/</div><div class="line">	&#125;</div><div class="line">	.demo-row-reverse &#123;</div><div class="line">	    flex-direction: row-reverse;</div><div class="line">	&#125;</div><div class="line">	.demo-column &#123;</div><div class="line">	    height: 200px;</div><div class="line">	    flex-direction: column;</div><div class="line">	&#125;</div><div class="line">	.demo-column-reverse &#123;</div><div class="line">	    height: 200px;</div><div class="line">	    flex-direction: column-reverse;</div><div class="line">	&#125;</div><div class="line">&lt;/style&gt;</div><div class="line">&lt;h3&gt;flex-direction: row; /*default*/&lt;/h3&gt;</div><div class="line">&lt;div class=<span class="string">"demo demo-row"</span>&gt;</div><div class="line">	&lt;div class=<span class="string">"item"</span> style=<span class="string">"flex:1"</span>&gt;flex: 1;&lt;/div&gt;</div><div class="line">	&lt;div class=<span class="string">"item"</span> style=<span class="string">"flex:2"</span>&gt;flex: 2;&lt;/div&gt;</div><div class="line">	&lt;div class=<span class="string">"item"</span> style=<span class="string">"flex:3"</span>&gt;flex: 3;&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;h3&gt;flex-direction: row-reverse;&lt;/h3&gt;</div><div class="line">&lt;div class=<span class="string">"demo demo-row-reverse"</span>&gt;</div><div class="line">	&lt;div class=<span class="string">"item"</span> style=<span class="string">"flex:1"</span>&gt;flex: 1;&lt;/div&gt;</div><div class="line">	&lt;div class=<span class="string">"item"</span> style=<span class="string">"flex:2"</span>&gt;flex: 2;&lt;/div&gt;</div><div class="line">	&lt;div class=<span class="string">"item"</span> style=<span class="string">"flex:3"</span>&gt;flex: 3;&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;h3&gt;flex-direction: column;&lt;/h3&gt;</div><div class="line">&lt;div class=<span class="string">"demo demo-column"</span>&gt;</div><div class="line">	&lt;div class=<span class="string">"item"</span> style=<span class="string">"flex:1"</span>&gt;flex: 1;&lt;/div&gt;</div><div class="line">	&lt;div class=<span class="string">"item"</span> style=<span class="string">"flex:2"</span>&gt;flex: 2;&lt;/div&gt;</div><div class="line">	&lt;div class=<span class="string">"item"</span> style=<span class="string">"flex:3"</span>&gt;flex: 3;&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;h3&gt;flex-direction: column-reverse;&lt;/h3&gt;</div><div class="line">&lt;div class=<span class="string">"demo demo-column-reverse"</span>&gt;</div><div class="line">	&lt;div class=<span class="string">"item"</span> style=<span class="string">"flex:1"</span>&gt;flex: 1;&lt;/div&gt;</div><div class="line">	&lt;div class=<span class="string">"item"</span> style=<span class="string">"flex:2"</span>&gt;flex: 2;&lt;/div&gt;</div><div class="line">	&lt;div class=<span class="string">"item"</span> style=<span class="string">"flex:3"</span>&gt;flex: 3;&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="flex-wrap"><a href="#flex-wrap" class="headerlink" title="[ flex-wrap ]"></a>[ flex-wrap ]</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;style&gt;</div><div class="line">	.demo &#123;</div><div class="line">	    color: <span class="comment">#fff;</span></div><div class="line">	    display: -webkit-flex;</div><div class="line">	    text-align: center;</div><div class="line">	&#125;</div><div class="line">	.demo-nowrap &#123;</div><div class="line">	    -webkit-flex-wrap: nowrap;</div><div class="line">	    width: 400px;</div><div class="line">	&#125;</div><div class="line">	.demo-wrap &#123;</div><div class="line">	    -webkit-flex-wrap: wrap;</div><div class="line">	    width: 400px;</div><div class="line">	&#125;</div><div class="line">	.demo-wrap-reverse &#123;</div><div class="line">	    -webkit-flex-wrap: wrap-reverse;</div><div class="line">	    width: 400px;</div><div class="line">	&#125;</div><div class="line">&lt;/style&gt;</div><div class="line">&lt;div class=<span class="string">"demo demo-nowrap"</span>&gt;</div><div class="line">	&lt;div class=<span class="string">"item"</span> style=<span class="string">"width: 100px"</span>&gt;100px;&lt;/div&gt;</div><div class="line">	&lt;div class=<span class="string">"item"</span> style=<span class="string">"width: 200px"</span>&gt;width: 200px;&lt;/div&gt;</div><div class="line">	&lt;div class=<span class="string">"item"</span> style=<span class="string">"width: 300px"</span>&gt;width: 300px;&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;div class=<span class="string">"demo demo-wrap"</span>&gt;</div><div class="line">	&lt;div class=<span class="string">"item"</span> style=<span class="string">"width: 100px"</span>&gt;100px;&lt;/div&gt;</div><div class="line">	&lt;div class=<span class="string">"item"</span> style=<span class="string">"width: 200px"</span>&gt;width: 200px;&lt;/div&gt;</div><div class="line">	&lt;div class=<span class="string">"item"</span> style=<span class="string">"width: 300px"</span>&gt;width: 300px;&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;div class=<span class="string">"demo demo-wrap-reverse"</span>&gt;</div><div class="line">	&lt;div class=<span class="string">"item"</span> style=<span class="string">"width: 100px"</span>&gt;100px;&lt;/div&gt;</div><div class="line">	&lt;div class=<span class="string">"item"</span> style=<span class="string">"width: 200px"</span>&gt;width: 200px;&lt;/div&gt;</div><div class="line">	&lt;div class=<span class="string">"item"</span> style=<span class="string">"width: 300px"</span>&gt;width: 300px;&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<h3 id="justify-content"><a href="#justify-content" class="headerlink" title="[ justify-content ]"></a>[ justify-content ]</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;style&gt;</div><div class="line">	.demo &#123;</div><div class="line">	    color: <span class="comment">#fff;</span></div><div class="line">	    display: -webkit-flex;</div><div class="line">	    text-align: center;</div><div class="line">	&#125;</div><div class="line">	.boxborder &#123;</div><div class="line">	    border: 1px dashed <span class="comment">#B6B6B6;</span></div><div class="line">	&#125;</div><div class="line">&lt;/style&gt;</div><div class="line">&lt;div class=<span class="string">"boxstyle"</span>&gt;</div><div class="line">	&lt;p&gt;/* 效果如同 <span class="built_in">float</span>:left; */&lt;/p&gt;</div><div class="line">	&lt;p&gt;justify-content: flex-start; /* default */&lt;/p&gt;</div><div class="line">	&lt;p&gt;display: -webkit-flex;&lt;/p&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;div class=<span class="string">"demo boxborder"</span> style=<span class="string">"justify-content: flex-start;"</span>&gt;</div><div class="line">	&lt;div class=<span class="string">"item"</span> style=<span class="string">"width:100px"</span>&gt;width:100px;&lt;/div&gt;</div><div class="line">	&lt;div class=<span class="string">"item"</span> style=<span class="string">"width:100px"</span>&gt;width:100px;&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;div class=<span class="string">"boxstyle"</span>&gt;</div><div class="line">	&lt;p&gt;&lt;p&gt;/* 效果如同 <span class="built_in">float</span>:right; */&lt;/p&gt;&lt;/p&gt;</div><div class="line">	&lt;p&gt;justify-content: flex-end;&lt;/p&gt;</div><div class="line">	&lt;p&gt;display: -webkit-flex;&lt;/p&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;div class=<span class="string">"demo demo-justify boxborder"</span>  style=<span class="string">"justify-content: flex-end;"</span>&gt;</div><div class="line">	&lt;div class=<span class="string">"item"</span> style=<span class="string">"width:100px"</span>&gt;width:100px;&lt;/div&gt;</div><div class="line">	&lt;div class=<span class="string">"item"</span> style=<span class="string">"width:100px"</span>&gt;width:100px;&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;div class=<span class="string">"boxstyle"</span>&gt;</div><div class="line">	&lt;p&gt;/* 第三代水平居中方案 */&lt;/p&gt;</div><div class="line">	&lt;p&gt;justify-content: center;&lt;/p&gt;</div><div class="line">	&lt;p&gt;display: -webkit-flex;&lt;/p&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;div class=<span class="string">"demo demo-justify-end boxborder"</span> style=<span class="string">"justify-content: center;"</span>&gt;</div><div class="line">	&lt;div class=<span class="string">"item"</span> style=<span class="string">"width:100px"</span>&gt;width:100px;&lt;/div&gt;</div><div class="line">	&lt;div class=<span class="string">"item"</span> style=<span class="string">"width:100px"</span>&gt;width:100px;&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;div class=<span class="string">"boxstyle"</span>&gt;</div><div class="line">	&lt;p&gt;justify-content: space-between; &lt;/p&gt;</div><div class="line">	&lt;p&gt;display: -webkit-flex;&lt;/p&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;div class=<span class="string">"demo demo-justify boxborder"</span> style=<span class="string">"justify-content: space-between;"</span>&gt;</div><div class="line">	&lt;div class=<span class="string">"item"</span> style=<span class="string">"width:100px"</span>&gt;width:100px;&lt;/div&gt;</div><div class="line">	&lt;div class=<span class="string">"item"</span> style=<span class="string">"width:100px"</span>&gt;width:100px;&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;div class=<span class="string">"boxstyle"</span>&gt;</div><div class="line">	&lt;p&gt;justify-content: space-around; &lt;/p&gt;</div><div class="line">	&lt;p&gt;display: -webkit-flex;&lt;/p&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;div class=<span class="string">"demo demo-justify-end boxborder"</span> style=<span class="string">"justify-content: space-around;"</span>&gt;</div><div class="line">	&lt;div class=<span class="string">"item"</span> style=<span class="string">"width:100px"</span>&gt;width:100px;&lt;/div&gt;</div><div class="line">	&lt;div class=<span class="string">"item"</span> style=<span class="string">"width:100px"</span>&gt;width:100px;&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<h3 id="align-self"><a href="#align-self" class="headerlink" title="[ align-self ]"></a>[ align-self ]</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;style&gt;</div><div class="line">	.demo &#123;</div><div class="line">	    color: <span class="comment">#fff;</span></div><div class="line">	    display: -webkit-flex;</div><div class="line">	    text-align: center;</div><div class="line">	&#125;</div><div class="line">	.boxborder &#123;</div><div class="line">	    border: 1px dashed <span class="comment">#B6B6B6;</span></div><div class="line">	&#125;</div><div class="line">&lt;/style&gt;</div><div class="line">&lt;div class=<span class="string">"boxes"</span>&gt;</div><div class="line">	&lt;div class=<span class="string">"box"</span> style=<span class="string">"width:1000px;"</span>&gt;</div><div class="line">		&lt;div class=<span class="string">"boxstyle"</span>&gt;</div><div class="line">			&lt;p&gt;display: -webkit-flex;&lt;/p&gt;</div><div class="line">		&lt;/div&gt;</div><div class="line">		&lt;div class=<span class="string">"demo boxborder"</span> style=<span class="string">"width: 1000px; height:200px;"</span>&gt;</div><div class="line">			&lt;div class=<span class="string">"item"</span> style=<span class="string">"width:200px; align-self:flex-start;"</span>&gt;</div><div class="line">				align-self:flex-start;</div><div class="line">			&lt;/div&gt;</div><div class="line">			&lt;div class=<span class="string">"item"</span> style=<span class="string">"width:200px; align-self:flex-end;"</span>&gt;</div><div class="line">				align-self:flex-end;</div><div class="line">			&lt;/div&gt;</div><div class="line">			&lt;div class=<span class="string">"item"</span> style=<span class="string">"width:200px; align-self:center;"</span>&gt;</div><div class="line">				align-self:center;</div><div class="line">			&lt;/div&gt;</div><div class="line">			&lt;div class=<span class="string">"item"</span> style=<span class="string">"width:200px; align-self:auto;"</span>&gt;</div><div class="line">				&lt;span&gt;align-self:auto;&lt;/span&gt;</div><div class="line">				&lt;span&gt;/*default */&lt;/span&gt;</div><div class="line">			&lt;/div&gt;</div><div class="line"></div><div class="line">			&lt;div class=<span class="string">"item"</span> style=<span class="string">"width:200px; align-self:baseline;"</span>&gt;</div><div class="line">				align-self:baseline;</div><div class="line">			&lt;/div&gt;</div><div class="line">			&lt;div class=<span class="string">"item"</span> style=<span class="string">"width:200px; align-self:stretch;"</span>&gt;</div><div class="line">				align-self:stretch;</div><div class="line">			&lt;/div&gt;</div><div class="line">		&lt;/div&gt;</div><div class="line">	&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<h3 id="align-items"><a href="#align-items" class="headerlink" title="[ align-items ]"></a>[ align-items ]</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;style&gt;</div><div class="line">	.demo &#123;</div><div class="line">	    color: <span class="comment">#fff;</span></div><div class="line">	    display: -webkit-flex;</div><div class="line">	    text-align: center;</div><div class="line">	&#125;</div><div class="line">	.boxborder &#123;</div><div class="line">	    border: 1px dashed <span class="comment">#B6B6B6;</span></div><div class="line">	&#125;</div><div class="line">&lt;/style&gt;</div><div class="line">&lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">	&lt;div class=<span class="string">"boxstyle"</span>&gt;</div><div class="line">		&lt;p&gt;align-items: flex-start; /* default */&lt;/p&gt;</div><div class="line">		&lt;p&gt;display: -webkit-flex;&lt;/p&gt;</div><div class="line">	&lt;/div&gt;</div><div class="line">	&lt;div class=<span class="string">"demo boxborder"</span> style=<span class="string">"align-items: flex-start;height:200px;"</span>&gt;</div><div class="line">		&lt;div class=<span class="string">"item"</span> style=<span class="string">"width:100px"</span>&gt;width:100px;&lt;/div&gt;</div><div class="line">		&lt;div class=<span class="string">"item"</span> style=<span class="string">"width:100px"</span>&gt;width:100px;&lt;/div&gt;</div><div class="line">	&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">&lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">	&lt;div class=<span class="string">"boxstyle"</span>&gt;</div><div class="line">		&lt;p&gt;align-items: flex-end; &lt;/p&gt;</div><div class="line">		&lt;p&gt;display: -webkit-flex;&lt;/p&gt;</div><div class="line">	&lt;/div&gt;</div><div class="line">	&lt;div class=<span class="string">"demo boxborder"</span> style=<span class="string">"align-items: flex-end;height:200px;"</span>&gt;</div><div class="line">		&lt;div class=<span class="string">"item"</span> style=<span class="string">"width:100px"</span>&gt;width:100px;&lt;/div&gt;</div><div class="line">		&lt;div class=<span class="string">"item"</span> style=<span class="string">"width:100px"</span>&gt;width:100px;&lt;/div&gt;</div><div class="line">	&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">&lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">	&lt;div class=<span class="string">"boxstyle"</span>&gt;</div><div class="line">		&lt;p&gt;/* 第三代垂直居中 */&lt;/p&gt;</div><div class="line">		&lt;p&gt;align-items: center; &lt;/p&gt;</div><div class="line">		&lt;p&gt;display: -webkit-flex;&lt;/p&gt;</div><div class="line">	&lt;/div&gt;</div><div class="line">	&lt;div class=<span class="string">"demo boxborder"</span> style=<span class="string">"align-items: center;height:200px;"</span>&gt;</div><div class="line">		&lt;div class=<span class="string">"item"</span> style=<span class="string">"width:100px"</span>&gt;width:100px;&lt;/div&gt;</div><div class="line">		&lt;div class=<span class="string">"item"</span> style=<span class="string">"width:100px"</span>&gt;width:100px;&lt;/div&gt;</div><div class="line">	&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">&lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">	&lt;div class=<span class="string">"boxstyle"</span>&gt;</div><div class="line">		&lt;p&gt;align-items: baseline; &lt;/p&gt;</div><div class="line">		&lt;p&gt;display: -webkit-flex;&lt;/p&gt;</div><div class="line">	&lt;/div&gt;</div><div class="line">	&lt;div class=<span class="string">"demo boxborder"</span> style=<span class="string">"align-items: baseline;height:200px;"</span>&gt;</div><div class="line">		&lt;div class=<span class="string">"item"</span> style=<span class="string">"width:100px"</span>&gt;width:100px;&lt;/div&gt;</div><div class="line">		&lt;div class=<span class="string">"item"</span> style=<span class="string">"width:100px"</span>&gt;width:100px;&lt;/div&gt;</div><div class="line">	&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">&lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">	&lt;div class=<span class="string">"boxstyle"</span>&gt;</div><div class="line">		&lt;p&gt;align-items: stretch; &lt;/p&gt;</div><div class="line">		&lt;p&gt;display: -webkit-flex;&lt;/p&gt;</div><div class="line">	&lt;/div&gt;</div><div class="line">	&lt;div class=<span class="string">"demo boxborder"</span> style=<span class="string">"align-items: stretch;height:200px;"</span>&gt;</div><div class="line">		&lt;div class=<span class="string">"item"</span> style=<span class="string">"width:100px; height:100px;"</span>&gt;height:100px;&lt;/div&gt;</div><div class="line">		&lt;div class=<span class="string">"item"</span> style=<span class="string">"width:150px; min-height:20px;"</span>&gt;min-height:20px;&lt;/div&gt;</div><div class="line">		&lt;div class=<span class="string">"item"</span> style=<span class="string">"width:150px; max-height:60px;"</span>&gt;max-height:60px;&lt;/div&gt;</div><div class="line">	&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2017/05/11/Web的Flex弹性盒模型/" class="archive-article-date">
+  	<time datetime="2017-05-11T00:57:15.794Z" itemprop="datePublished"><i class="icon-clock"></i>2017-05-11</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css3/">css3</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/05/11/一些基础的前端技术面试问题/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          一些基础的前端技术面试问题
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/05/11/javascript数组的知识点讲解/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">javascript数组的知识点讲解</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 80Sky
+    	</div>
+      	<div class="footer-right">
+      		Copyright@ by 80Sky
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/"
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/canvas/" style="font-size: 16.67px;">canvas</a> <a href="/tags/css/" style="font-size: 13.33px;">css</a> <a href="/tags/css3/" style="font-size: 16.67px;">css3</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/html5/" style="font-size: 13.33px;">html5</a> <a href="/tags/jQuery/" style="font-size: 10px;">jQuery</a> <a href="/tags/js/" style="font-size: 20px;">js</a> <a href="/tags/面试/" style="font-size: 10px;">面试</a>
+    			</div>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+  			<div class="friends-wrap" id="js-friends">
+  			
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://80sky.github.io/">友情链接1</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://80sky.github.io/">友情链接2</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://80sky.github.io/">友情链接3</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://80sky.github.io/">友情链接4</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://80sky.github.io/">友情链接5</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://80sky.github.io/">友情链接6</a>
+  	        
+  	        </div>
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">QQ296594402&lt;br&gt;&lt;br&gt;裥單嚸&lt;br&gt;裥單生活</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>

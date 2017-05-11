@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>三种方式实现瀑布流 | 80Sky</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="第一种javascript实现  123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596">
+<meta name="keywords" content="jQuery,js,css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="三种方式实现瀑布流">
+<meta property="og:url" content="http://80sky.github.io/2017/05/11/3种方式实现瀑布流/index.html">
+<meta property="og:site_name" content="80Sky">
+<meta property="og:description" content="第一种javascript实现  123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596">
+<meta property="og:updated_time" content="2016-09-26T02:59:31.056Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="三种方式实现瀑布流">
+<meta name="twitter:description" content="第一种javascript实现  123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596">
+  
+    <link rel="alternative" href="/atom.xml" title="80Sky" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/favicon.ico">
+  
+  <script src="/style.js"></script>
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="/images/header.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">80Sky</a></h1>
+		</hgroup>
+
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/resume">简历</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">友链</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="3" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/80sky" title="github">github</a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/" title="weibo">weibo</a>
+		        
+					<a class="rss" target="_blank" href="#" title="rss">rss</a>
+		        
+					<a class="zhihu" target="_blank" href="https://www.zhihu.com/" title="zhihu">zhihu</a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">80Sky</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="/images/header.jpg" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">80Sky</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/resume">简历</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/80sky" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-3种方式实现瀑布流" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      三种方式实现瀑布流
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="第一种javascript实现"><a href="#第一种javascript实现" class="headerlink" title="第一种javascript实现"></a>第一种javascript实现</h3>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div><div class="line">211</div><div class="line">212</div><div class="line">213</div><div class="line">214</div><div class="line">215</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=<span class="string">"en"</span>&gt;</div><div class="line">    &lt;head&gt;</div><div class="line">      &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</div><div class="line">      &lt;title&gt;Title&lt;/title&gt;</div><div class="line">      &lt;style&gt;</div><div class="line">        *&#123;margin: 0;padding: 0&#125;</div><div class="line">        <span class="comment">#main&#123;position: relative&#125;</span></div><div class="line">        .box&#123;padding: 15px 0 0px 15px;<span class="built_in">float</span>: left;&#125;</div><div class="line">        .pic&#123;padding: 10px;border:1px solid <span class="comment">#ccc;box-shadow: 0 0 1px #111&#125;</span></div><div class="line">        .pic img&#123;width: 165px;height: auto;&#125;</div><div class="line">      &lt;/style&gt;</div><div class="line">    &lt;/head&gt;</div><div class="line">    &lt;body&gt;</div><div class="line">      &lt;div id=<span class="string">"main"</span>&gt;</div><div class="line">        &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">          &lt;div class=<span class="string">"pic"</span>&gt;</div><div class="line">            &lt;img src=<span class="string">"images/0.jpg"</span> alt=<span class="string">""</span>&gt;</div><div class="line">          &lt;/div&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">          &lt;div class=<span class="string">"pic"</span>&gt;</div><div class="line">            &lt;img src=<span class="string">"images/1.jpg"</span> alt=<span class="string">""</span>&gt;</div><div class="line">          &lt;/div&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">          &lt;div class=<span class="string">"pic"</span>&gt;</div><div class="line">            &lt;img src=<span class="string">"images/2.jpg"</span> alt=<span class="string">""</span>&gt;</div><div class="line">          &lt;/div&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">          &lt;div class=<span class="string">"pic"</span>&gt;</div><div class="line">            &lt;img src=<span class="string">"images/3.jpg"</span> alt=<span class="string">""</span>&gt;</div><div class="line">          &lt;/div&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">          &lt;div class=<span class="string">"pic"</span>&gt;</div><div class="line">            &lt;img src=<span class="string">"images/4.jpg"</span> alt=<span class="string">""</span>&gt;</div><div class="line">          &lt;/div&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">          &lt;div class=<span class="string">"pic"</span>&gt;</div><div class="line">            &lt;img src=<span class="string">"images/5.jpg"</span> alt=<span class="string">""</span>&gt;</div><div class="line">          &lt;/div&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">          &lt;div class=<span class="string">"pic"</span>&gt;</div><div class="line">            &lt;img src=<span class="string">"images/6.jpg"</span> alt=<span class="string">""</span>&gt;</div><div class="line">          &lt;/div&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">          &lt;div class=<span class="string">"pic"</span>&gt;</div><div class="line">            &lt;img src=<span class="string">"images/7.jpg"</span> alt=<span class="string">""</span>&gt;</div><div class="line">          &lt;/div&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">          &lt;div class=<span class="string">"pic"</span>&gt;</div><div class="line">            &lt;img src=<span class="string">"images/8.jpg"</span> alt=<span class="string">""</span>&gt;</div><div class="line">          &lt;/div&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">          &lt;div class=<span class="string">"pic"</span>&gt;</div><div class="line">            &lt;img src=<span class="string">"images/9.jpg"</span> alt=<span class="string">""</span>&gt;</div><div class="line">          &lt;/div&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">          &lt;div class=<span class="string">"pic"</span>&gt;</div><div class="line">            &lt;img src=<span class="string">"images/10.jpg"</span> alt=<span class="string">""</span>&gt;</div><div class="line">          &lt;/div&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">          &lt;div class=<span class="string">"pic"</span>&gt;</div><div class="line">            &lt;img src=<span class="string">"images/11.jpg"</span> alt=<span class="string">""</span>&gt;</div><div class="line">          &lt;/div&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">          &lt;div class=<span class="string">"pic"</span>&gt;</div><div class="line">            &lt;img src=<span class="string">"images/12.jpg"</span> alt=<span class="string">""</span>&gt;</div><div class="line">          &lt;/div&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">          &lt;div class=<span class="string">"pic"</span>&gt;</div><div class="line">            &lt;img src=<span class="string">"images/13.jpg"</span> alt=<span class="string">""</span>&gt;</div><div class="line">          &lt;/div&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">          &lt;div class=<span class="string">"pic"</span>&gt;</div><div class="line">            &lt;img src=<span class="string">"images/14.jpg"</span> alt=<span class="string">""</span>&gt;</div><div class="line">          &lt;/div&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">          &lt;div class=<span class="string">"pic"</span>&gt;</div><div class="line">            &lt;img src=<span class="string">"images/15.jpg"</span> alt=<span class="string">""</span>&gt;</div><div class="line">          &lt;/div&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">          &lt;div class=<span class="string">"pic"</span>&gt;</div><div class="line">            &lt;img src=<span class="string">"images/16.jpg"</span> alt=<span class="string">""</span>&gt;</div><div class="line">          &lt;/div&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">          &lt;div class=<span class="string">"pic"</span>&gt;</div><div class="line">            &lt;img src=<span class="string">"images/17.jpg"</span> alt=<span class="string">""</span>&gt;</div><div class="line">          &lt;/div&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">          &lt;div class=<span class="string">"pic"</span>&gt;</div><div class="line">            &lt;img src=<span class="string">"images/18.jpg"</span> alt=<span class="string">""</span>&gt;</div><div class="line">          &lt;/div&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">          &lt;div class=<span class="string">"pic"</span>&gt;</div><div class="line">            &lt;img src=<span class="string">"images/19.jpg"</span> alt=<span class="string">""</span>&gt;</div><div class="line">          &lt;/div&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">          &lt;div class=<span class="string">"pic"</span>&gt;</div><div class="line">            &lt;img src=<span class="string">"images/20.jpg"</span> alt=<span class="string">""</span>&gt;</div><div class="line">          &lt;/div&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">      &lt;/div&gt;</div><div class="line">      &lt;script&gt;</div><div class="line">        window.onload = <span class="function"><span class="title">function</span></span> () &#123;</div><div class="line">          waterfall(<span class="string">'main'</span>,<span class="string">'box'</span>);</div><div class="line">          var dataInt = &#123;</div><div class="line">            data:[</div><div class="line">              &#123;src:<span class="string">'21.jpg'</span>&#125;,</div><div class="line">              &#123;src:<span class="string">'22.jpg'</span>&#125;,</div><div class="line">              &#123;src:<span class="string">'23.jpg'</span>&#125;,</div><div class="line">              &#123;src:<span class="string">'24.jpg'</span>&#125;</div><div class="line">            ]</div><div class="line">          &#125;;</div><div class="line">          window.onscroll = <span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">            <span class="keyword">if</span>(checkScrollSlide)&#123;</div><div class="line">              var oParent = document.getElementById(<span class="string">'main'</span>);</div><div class="line">              //  讲数据框渲染到页面的尾部</div><div class="line">              <span class="keyword">for</span>(var i=0;i&lt;dataInt.data.length;i++)&#123;</div><div class="line">                var oBox = document.createElement(<span class="string">'div'</span>);</div><div class="line">                oBox.className = <span class="string">'box'</span>;</div><div class="line">                oParent.appendChild(oBox);</div><div class="line">                var oPic = document.createElement(<span class="string">'div'</span>);</div><div class="line">                oPic.className = <span class="string">'pic'</span>;</div><div class="line">                oBox.appendChild(oPic);</div><div class="line">                var oImg = document.createElement(<span class="string">'img'</span>);</div><div class="line">                oImg.src = <span class="string">"images/"</span> + dataInt.data[i].src;</div><div class="line">                oPic.appendChild(oImg);</div><div class="line">              &#125;</div><div class="line">              waterfall(<span class="string">'main'</span>,<span class="string">'box'</span>);</div><div class="line">            &#125;</div><div class="line">          &#125;</div><div class="line">        &#125;;</div><div class="line"></div><div class="line">        <span class="keyword">function</span> waterfall(parent,box)&#123;</div><div class="line">          //讲main下面的所有为box的元素取出来</div><div class="line">          var oParent = document.getElementById(parent);</div><div class="line">          var oBoxs =  getByClass(oParent,box);</div><div class="line">          //计算整个页面显示的列数（页面宽/box宽）</div><div class="line">          var oBoxW = oBoxs[0].offsetWidth;</div><div class="line">          var cols = Math.floor(document.documentElement.clientWidth / oBoxW);</div><div class="line">          //设置main的宽度；</div><div class="line">          oParent.style.cssText = <span class="string">'width:'</span> + oBoxW * cols+<span class="string">'px; margin:0 auto'</span>;</div><div class="line">          var hArr = [];//存放高度的数组</div><div class="line">          <span class="keyword">for</span>(var i=0;i&lt;oBoxs.length;i++)&#123;</div><div class="line">            <span class="keyword">if</span>(i &lt; cols)&#123;</div><div class="line">              hArr.push(oBoxs[i].offsetHeight);</div><div class="line">            &#125;<span class="keyword">else</span>&#123;</div><div class="line">              var minH = Math.min.apply(null,hArr);</div><div class="line">              var index =  getMinhIndex(hArr,minH);</div><div class="line">              oBoxs[i].style.position = <span class="string">'absolute'</span>;</div><div class="line">              oBoxs[i].style.top = minH + <span class="string">'px'</span>;</div><div class="line">              // oBoxs[i].style.left = oBoxW * index + <span class="string">'px'</span>; 两种方式都可以</div><div class="line">              oBoxs[i].style.left = oBoxs[index].offsetLeft + <span class="string">'px'</span>;</div><div class="line">              hArr[index] += oBoxs[i].offsetHeight;</div><div class="line">            &#125;</div><div class="line">          &#125;</div><div class="line"></div><div class="line">          console.log(hArr);</div><div class="line">          console.log(minH);</div><div class="line">          console.log(index);</div><div class="line">        &#125;</div><div class="line"></div><div class="line"></div><div class="line">        //根据class获取元素</div><div class="line">        <span class="keyword">function</span> getByClass(parent,clsName)&#123;</div><div class="line">          var boxArr = [], //用来存储获取所有box的元素</div><div class="line">              oElemts = parent.getElementsByTagName(<span class="string">"*"</span>);</div><div class="line">          <span class="keyword">for</span>(var i=0;i&lt;oElemts.length;i++)&#123;</div><div class="line">            <span class="keyword">if</span>(oElemts[i].className == clsName)&#123;</div><div class="line">              boxArr.push(oElemts[i]);</div><div class="line">            &#125;</div><div class="line">          &#125;</div><div class="line">          <span class="built_in">return</span> boxArr;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        //判断最小高度的索引</div><div class="line">        <span class="keyword">function</span> getMinhIndex(arr,val)&#123;</div><div class="line">          <span class="keyword">for</span>(var i <span class="keyword">in</span> arr)&#123;</div><div class="line">            <span class="keyword">if</span>(arr[i] == val)&#123;</div><div class="line">              <span class="built_in">return</span> i;</div><div class="line">            &#125;</div><div class="line">          &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        //检查是否具备加载数据块条件；</div><div class="line">        <span class="keyword">function</span>  <span class="function"><span class="title">checkScrollSlide</span></span>()&#123;</div><div class="line">          var oParent = document.getElementById(<span class="string">'main'</span>);</div><div class="line">          var oBoxs = getByClass(oParent,<span class="string">'box'</span>);</div><div class="line">          var lastBoxH = oBoxs[oBoxs.length-1].offsetTop + Math.floor(oBoxs[oBoxs.length-1].offsetHeight / 2);</div><div class="line">          var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;</div><div class="line">          var height = document.body.clientHeight || document.documentElement.clientHeight;</div><div class="line">          <span class="built_in">return</span> (lastBoxH&lt;scrollTop+height) ? <span class="literal">true</span> : <span class="literal">false</span>;</div><div class="line">        &#125;</div><div class="line">      &lt;/script&gt;</div><div class="line">    &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+  <a id="more"></a>
+<h3 id="第二种-jQuery-实现"><a href="#第二种-jQuery-实现" class="headerlink" title="第二种 jQuery 实现"></a>第二种 jQuery 实现</h3>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">    &lt;head&gt;</div><div class="line">    &lt;meta http-equiv=<span class="string">"Content-Type"</span> content=<span class="string">"text/html; charset=UTF-8"</span> /&gt;</div><div class="line">    &lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span> src=<span class="string">"js/jquery-1.8.3.min.js"</span>/&gt;&lt;/script&gt;</div><div class="line">    &lt;title&gt;&lt;/title&gt;</div><div class="line">    &lt;style <span class="built_in">type</span>=<span class="string">"text/css"</span>&gt;</div><div class="line">        *&#123;padding: 0;margin:0;&#125;</div><div class="line">        <span class="comment">#main&#123;</span></div><div class="line">            position: relative;</div><div class="line">        &#125;</div><div class="line">        .pin&#123;</div><div class="line">            padding: 15px 0 0 15px;</div><div class="line">            <span class="built_in">float</span>:left;</div><div class="line">        &#125;</div><div class="line">        .box&#123;</div><div class="line">            padding: 10px;</div><div class="line">            border:1px solid <span class="comment">#ccc;</span></div><div class="line">            box-shadow: 0 0 6px <span class="comment">#ccc;</span></div><div class="line">            border-radius: 5px;</div><div class="line">        &#125;</div><div class="line">        .box img&#123;</div><div class="line">            width:162px;</div><div class="line">            height:auto;</div><div class="line">        &#125;</div><div class="line">    &lt;/style&gt;</div><div class="line">    &lt;/head&gt;</div><div class="line">    &lt;body&gt;</div><div class="line">        &lt;div id=<span class="string">"main"</span>&gt;</div><div class="line">            &lt;div class=<span class="string">"pin"</span>&gt;</div><div class="line">                &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">                    &lt;img src=<span class="string">"images/1.jpg"</span>/&gt;</div><div class="line">                &lt;/div&gt;</div><div class="line">            &lt;/div&gt;</div><div class="line">            &lt;div class=<span class="string">"pin"</span>&gt;</div><div class="line">                &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">                    &lt;img src=<span class="string">"images/2.jpg"</span>/&gt;</div><div class="line">                &lt;/div&gt;</div><div class="line">            &lt;/div&gt;</div><div class="line">            &lt;div class=<span class="string">"pin"</span>&gt;</div><div class="line">                &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">                    &lt;img src=<span class="string">"images/3.jpg"</span>/&gt;</div><div class="line">                &lt;/div&gt;</div><div class="line">            &lt;/div&gt;</div><div class="line">            &lt;div class=<span class="string">"pin"</span>&gt;</div><div class="line">                &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">                    &lt;img src=<span class="string">"images/4.jpg"</span>/&gt;</div><div class="line">                &lt;/div&gt;</div><div class="line">            &lt;/div&gt;</div><div class="line">            &lt;div class=<span class="string">"pin"</span>&gt;</div><div class="line">                &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">                    &lt;img src=<span class="string">"images/5.jpg"</span>/&gt;</div><div class="line">                &lt;/div&gt;</div><div class="line">            &lt;/div&gt;</div><div class="line">            &lt;div class=<span class="string">"pin"</span>&gt;</div><div class="line">                &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">                    &lt;img src=<span class="string">"images/6.jpg"</span>/&gt;</div><div class="line">                &lt;/div&gt;</div><div class="line">            &lt;/div&gt;</div><div class="line">            &lt;div class=<span class="string">"pin"</span>&gt;</div><div class="line">                &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">                    &lt;img src=<span class="string">"images/7.jpg"</span>/&gt;</div><div class="line">                &lt;/div&gt;</div><div class="line">            &lt;/div&gt;</div><div class="line">            &lt;div class=<span class="string">"pin"</span>&gt;</div><div class="line">                &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">                    &lt;img src=<span class="string">"images/8.jpg"</span>/&gt;</div><div class="line">                &lt;/div&gt;</div><div class="line">            &lt;/div&gt;</div><div class="line">            &lt;div class=<span class="string">"pin"</span>&gt;</div><div class="line">                &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">                    &lt;img src=<span class="string">"images/9.jpg"</span>/&gt;</div><div class="line">                &lt;/div&gt;</div><div class="line">            &lt;/div&gt;</div><div class="line">            &lt;div class=<span class="string">"pin"</span>&gt;</div><div class="line">                &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">                    &lt;img src=<span class="string">"images/10.jpg"</span>/&gt;</div><div class="line">                &lt;/div&gt;</div><div class="line">            &lt;/div&gt;</div><div class="line">            &lt;div class=<span class="string">"pin"</span>&gt;</div><div class="line">                &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">                    &lt;img src=<span class="string">"images/11.jpg"</span>/&gt;</div><div class="line">                &lt;/div&gt;</div><div class="line">            &lt;/div&gt;</div><div class="line">            &lt;div class=<span class="string">"pin"</span>&gt;</div><div class="line">                &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">                    &lt;img src=<span class="string">"images/12.jpg"</span>/&gt;</div><div class="line">                &lt;/div&gt;</div><div class="line">            &lt;/div&gt;</div><div class="line">            &lt;div class=<span class="string">"pin"</span>&gt;</div><div class="line">                &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">                    &lt;img src=<span class="string">"images/13.jpg"</span>/&gt;</div><div class="line">                &lt;/div&gt;</div><div class="line">            &lt;/div&gt;</div><div class="line">            &lt;div class=<span class="string">"pin"</span>&gt;</div><div class="line">                &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">                    &lt;img src=<span class="string">"images/14.jpg"</span>/&gt;</div><div class="line">                &lt;/div&gt;</div><div class="line">            &lt;/div&gt;</div><div class="line">            &lt;div class=<span class="string">"pin"</span>&gt;</div><div class="line">                &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">                    &lt;img src=<span class="string">"images/15.jpg"</span>/&gt;</div><div class="line">                &lt;/div&gt;</div><div class="line">            &lt;/div&gt;</div><div class="line">            &lt;div class=<span class="string">"pin"</span>&gt;</div><div class="line">                &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">                    &lt;img src=<span class="string">"images/16.jpg"</span>/&gt;</div><div class="line">                &lt;/div&gt;</div><div class="line">            &lt;/div&gt;</div><div class="line">            &lt;div class=<span class="string">"pin"</span>&gt;</div><div class="line">                &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">                    &lt;img src=<span class="string">"images/17.jpg"</span>/&gt;</div><div class="line">                &lt;/div&gt;</div><div class="line">            &lt;/div&gt;</div><div class="line">            &lt;div class=<span class="string">"pin"</span>&gt;</div><div class="line">                &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">                    &lt;img src=<span class="string">"images/18.jpg"</span>/&gt;</div><div class="line">                &lt;/div&gt;</div><div class="line">            &lt;/div&gt;</div><div class="line">            &lt;div class=<span class="string">"pin"</span>&gt;</div><div class="line">                &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">                    &lt;img src=<span class="string">"images/19.jpg"</span>/&gt;</div><div class="line">                &lt;/div&gt;</div><div class="line">            &lt;/div&gt;</div><div class="line">            &lt;div class=<span class="string">"pin"</span>&gt;</div><div class="line">                &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">                    &lt;img src=<span class="string">"images/20.jpg"</span>/&gt;</div><div class="line">                &lt;/div&gt;</div><div class="line">            &lt;/div&gt;</div><div class="line">            &lt;div class=<span class="string">"pin"</span>&gt;</div><div class="line">                &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">                    &lt;img src=<span class="string">"images/21.jpg"</span>/&gt;</div><div class="line">                &lt;/div&gt;</div><div class="line">            &lt;/div&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">        &lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span>&gt;</div><div class="line">            $( window ).on( <span class="string">"load"</span>, <span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">                waterfall(<span class="string">'main'</span>,<span class="string">'pin'</span>);</div><div class="line">                var dataInt=&#123;<span class="string">'data'</span>:[&#123;<span class="string">'src'</span>:<span class="string">'1.jpg'</span>&#125;,&#123;<span class="string">'src'</span>:<span class="string">'2.jpg'</span>&#125;,&#123;<span class="string">'src'</span>:<span class="string">'3.jpg'</span>&#125;,&#123;<span class="string">'src'</span>:<span class="string">'4.jpg'</span>&#125;]&#125;;</div><div class="line">                window.onscroll=<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">                    <span class="keyword">if</span>(checkscrollside())&#123;</div><div class="line">                        $.each( dataInt.data, <span class="keyword">function</span>( index, value )&#123;</div><div class="line">                            var <span class="variable">$oPin</span> = $(<span class="string">'&lt;div&gt;'</span>).addClass(<span class="string">'pin'</span>).appendTo( $( <span class="string">"#main"</span> ) );</div><div class="line">                            var <span class="variable">$oBox</span> = $(<span class="string">'&lt;div&gt;'</span>).addClass(<span class="string">'box'</span>).appendTo( <span class="variable">$oPin</span> );</div><div class="line">                            $(<span class="string">'&lt;img&gt;'</span>).attr(<span class="string">'src'</span>,<span class="string">'./images/'</span> + $( value).attr( <span class="string">'src'</span>) ).appendTo(<span class="variable">$oBox</span>);</div><div class="line">                        &#125;);</div><div class="line">                        waterfall();</div><div class="line">                    &#125;;</div><div class="line">                &#125;</div><div class="line">            &#125;);</div><div class="line"></div><div class="line">            /*</div><div class="line">                parend 父级id</div><div class="line">                pin 元素id</div><div class="line">            */</div><div class="line">            <span class="keyword">function</span> waterfall(parent,pin)&#123;</div><div class="line">                var <span class="variable">$aPin</span> = $( <span class="string">"#main&gt;div"</span> );</div><div class="line">                var iP<span class="keyword">in</span>W = <span class="variable">$aPin</span>.eq( 0 ).outerWidth();// 一个块框pin的宽</div><div class="line">                var num = Math.floor( $( window ).width() / iP<span class="keyword">in</span>W );//每行中能容纳的pin个数【窗口宽度除以一个块框宽度】</div><div class="line">                //oParent.style.cssText=<span class="string">'width:'</span>+iP<span class="keyword">in</span>W*num+<span class="string">'px;ma rgin:0 auto;'</span>;//设置父级居中样式：定宽+自动水平外边距</div><div class="line">                $( <span class="string">"#main"</span> ).css(&#123;<span class="string">'width'</span>:iP<span class="keyword">in</span>W * num,<span class="string">'margin'</span>:<span class="string">'0 auto'</span>&#125;);</div><div class="line">                var pinHArr=[];//用于存储 每列中的所有块框相加的高度。</div><div class="line"></div><div class="line">                <span class="variable">$aPin</span>.each( <span class="keyword">function</span>( index, value )&#123;</div><div class="line">                    var pinH = <span class="variable">$aPin</span>.eq( index ).height();</div><div class="line">                    <span class="keyword">if</span>( index &lt; num )&#123;</div><div class="line">                        pinHArr[ index ] = pinH; //第一行中的num个块框pin 先添加进数组pinHArr</div><div class="line">                    &#125;<span class="keyword">else</span>&#123;</div><div class="line">                        var minH = Math.min.apply( null, pinHArr );//数组pinHArr中的最小值minH</div><div class="line">                        var minHIndex = $.inArray( minH, pinHArr );</div><div class="line">                        $( value ).css(&#123;</div><div class="line">                            <span class="string">'position'</span>: <span class="string">'absolute'</span>,</div><div class="line">                            <span class="string">'top'</span>: minH + 15,</div><div class="line">                            <span class="string">'left'</span>: <span class="variable">$aPin</span>.eq( minHIndex ).position().left</div><div class="line">                        &#125;);</div><div class="line">                        //数组 最小高元素的高 + 添加上的aP<span class="keyword">in</span>[i]块框高</div><div class="line">                        pinHArr[ minHIndex ] += <span class="variable">$aPin</span>.eq( index ).height() + 15;//更新添加了块框后的列高</div><div class="line">                    &#125;</div><div class="line">                &#125;);</div><div class="line">            &#125;</div><div class="line"></div><div class="line">            <span class="keyword">function</span> <span class="function"><span class="title">checkscrollside</span></span>()&#123;</div><div class="line">                var <span class="variable">$aPin</span> = $( <span class="string">"#main&gt;div"</span> );</div><div class="line">                var lastP<span class="keyword">in</span>H = <span class="variable">$aPin</span>.last().get(0).offsetTop + Math.floor(<span class="variable">$aPin</span>.last().height()/2);//创建【触发添加块框函数waterfall()】的高度：最后一个块框的距离网页顶部+自身高的一半(实现未滚到底就开始加载)</div><div class="line">                var scrollTop = $( window ).scrollTop()//注意解决兼容性</div><div class="line">                var documentH = $( document ).width();//页面高度</div><div class="line">                <span class="built_in">return</span> (lastP<span class="keyword">in</span>H &lt; scrollTop + documentH ) ? <span class="literal">true</span> : <span class="literal">false</span>;//到达指定高度后 返回<span class="literal">true</span>，触发waterfall()函数</div><div class="line">            &#125;</div><div class="line">        &lt;/script&gt;</div><div class="line">    &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<h3 id="第三种-纯CSS3实现的瀑布流"><a href="#第三种-纯CSS3实现的瀑布流" class="headerlink" title="第三种 纯CSS3实现的瀑布流"></a>第三种 纯CSS3实现的瀑布流</h3>   <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div></pre></td><td class="code"><pre><div class="line">&lt;!doctype html&gt;</div><div class="line">&lt;html lang=<span class="string">"en"</span>&gt;</div><div class="line">    &lt;head&gt;</div><div class="line">        &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</div><div class="line">        &lt;title&gt;纯CSS3实现的瀑布流&lt;/title&gt;</div><div class="line">        &lt;style&gt;</div><div class="line">            .container&#123;</div><div class="line">                -webkit-column-width:160px;</div><div class="line">                -moz-column-width:160px; </div><div class="line">                  -webkit-column-gap:5px;</div><div class="line">                  -moz-column-gap:5px;</div><div class="line">            &#125;</div><div class="line"></div><div class="line"></div><div class="line">            /*数据块 砖块*/</div><div class="line"></div><div class="line">            .container div&#123;width:160px;</div><div class="line">                           margin:4px 0;&#125;</div><div class="line">        &lt;/style&gt;</div><div class="line">    &lt;/head&gt;</div><div class="line">    &lt;body&gt;</div><div class="line">        &lt;div class=<span class="string">"container"</span>&gt;</div><div class="line">            &lt;div&gt;&lt;img src=<span class="string">"images/P_00.jpg"</span> /&gt;&lt;/div&gt;</div><div class="line">            &lt;div&gt;&lt;img src=<span class="string">"images/P_01.jpg"</span> /&gt;&lt;/div&gt;</div><div class="line">            &lt;div&gt;&lt;img src=<span class="string">"images/P_02.jpg"</span> /&gt;&lt;/div&gt;</div><div class="line">            &lt;div&gt;&lt;img src=<span class="string">"images/P_03.jpg"</span> /&gt;&lt;/div&gt;</div><div class="line">            &lt;div&gt;&lt;img src=<span class="string">"images/P_04.jpg"</span> /&gt;&lt;/div&gt;</div><div class="line">            &lt;div&gt;&lt;img src=<span class="string">"images/P_05.jpg"</span> /&gt;&lt;/div&gt;</div><div class="line">            &lt;div&gt;&lt;img src=<span class="string">"images/P_06.jpg"</span> /&gt;&lt;/div&gt;</div><div class="line">            &lt;div&gt;&lt;img src=<span class="string">"images/P_07.jpg"</span> /&gt;&lt;/div&gt;</div><div class="line">            &lt;div&gt;&lt;img src=<span class="string">"images/P_08.jpg"</span> /&gt;&lt;/div&gt;</div><div class="line">            &lt;div&gt;&lt;img src=<span class="string">"images/P_09.jpg"</span> /&gt;&lt;/div&gt;</div><div class="line">            &lt;div&gt;&lt;img src=<span class="string">"images/P_010.jpg"</span> /&gt;&lt;/div&gt;</div><div class="line">            &lt;div&gt;&lt;img src=<span class="string">"images/P_011.jpg"</span> /&gt;&lt;/div&gt;</div><div class="line">            &lt;div&gt;&lt;img src=<span class="string">"images/P_012.jpg"</span> /&gt;&lt;/div&gt;</div><div class="line">            &lt;div&gt;&lt;img src=<span class="string">"images/P_013.jpg"</span> /&gt;&lt;/div&gt;</div><div class="line">            &lt;div&gt;&lt;img src=<span class="string">"images/P_014.jpg"</span> /&gt;&lt;/div&gt;</div><div class="line">            &lt;div&gt;&lt;img src=<span class="string">"images/P_015.jpg"</span> /&gt;&lt;/div&gt;</div><div class="line">            &lt;div&gt;&lt;img src=<span class="string">"images/P_016.jpg"</span> /&gt;&lt;/div&gt;</div><div class="line">            &lt;div&gt;&lt;img src=<span class="string">"images/P_017.jpg"</span> /&gt;&lt;/div&gt;</div><div class="line">            &lt;div&gt;&lt;img src=<span class="string">"images/P_018.jpg"</span> /&gt;&lt;/div&gt;</div><div class="line">            &lt;div&gt;&lt;img src=<span class="string">"images/P_019.jpg"</span> /&gt;&lt;/div&gt;</div><div class="line">            &lt;div&gt;&lt;img src=<span class="string">"images/P_05.jpg"</span> /&gt;&lt;/div&gt;</div><div class="line">            &lt;div&gt;&lt;img src=<span class="string">"images/P_06.jpg"</span> /&gt;&lt;/div&gt;</div><div class="line">            &lt;div&gt;&lt;img src=<span class="string">"images/P_07.jpg"</span> /&gt;&lt;/div&gt;</div><div class="line">            &lt;div&gt;&lt;img src=<span class="string">"images/P_08.jpg"</span> /&gt;&lt;/div&gt;</div><div class="line">            &lt;div&gt;&lt;img src=<span class="string">"images/P_09.jpg"</span> /&gt;&lt;/div&gt;</div><div class="line">            &lt;div&gt;&lt;img src=<span class="string">"images/P_010.jpg"</span> /&gt;&lt;/div&gt;</div><div class="line">            &lt;div&gt;&lt;img src=<span class="string">"images/P_011.jpg"</span> /&gt;&lt;/div&gt;</div><div class="line">            &lt;div&gt;&lt;img src=<span class="string">"images/P_012.jpg"</span> /&gt;&lt;/div&gt;</div><div class="line">            &lt;div&gt;&lt;img src=<span class="string">"images/P_013.jpg"</span> /&gt;&lt;/div&gt;</div><div class="line">            &lt;div&gt;&lt;img src=<span class="string">"images/P_05.jpg"</span> /&gt;&lt;/div&gt;</div><div class="line">            &lt;div&gt;&lt;img src=<span class="string">"images/P_06.jpg"</span> /&gt;&lt;/div&gt;</div><div class="line">            &lt;div&gt;&lt;img src=<span class="string">"images/P_07.jpg"</span> /&gt;&lt;/div&gt;</div><div class="line">            &lt;div&gt;&lt;img src=<span class="string">"images/P_08.jpg"</span> /&gt;&lt;/div&gt;</div><div class="line">            &lt;div&gt;&lt;img src=<span class="string">"images/P_09.jpg"</span> /&gt;&lt;/div&gt;</div><div class="line">            &lt;div&gt;&lt;img src=<span class="string">"images/P_010.jpg"</span> /&gt;&lt;/div&gt;</div><div class="line">            &lt;div&gt;&lt;img src=<span class="string">"images/P_011.jpg"</span> /&gt;&lt;/div&gt;</div><div class="line">            &lt;div&gt;&lt;img src=<span class="string">"images/P_012.jpg"</span> /&gt;&lt;/div&gt;</div><div class="line">            &lt;div&gt;&lt;img src=<span class="string">"images/P_013.jpg"</span> /&gt;&lt;/div&gt;</div><div class="line">            &lt;div&gt;&lt;img src=<span class="string">"images/P_03.jpg"</span> /&gt;&lt;/div&gt;</div><div class="line">            &lt;div&gt;&lt;img src=<span class="string">"images/P_04.jpg"</span> /&gt;&lt;/div&gt;</div><div class="line">            &lt;div&gt;&lt;img src=<span class="string">"images/P_05.jpg"</span> /&gt;&lt;/div&gt;</div><div class="line">            &lt;div&gt;&lt;img src=<span class="string">"images/P_06.jpg"</span> /&gt;&lt;/div&gt;</div><div class="line">            &lt;div&gt;&lt;img src=<span class="string">"images/P_07.jpg"</span> /&gt;&lt;/div&gt;</div><div class="line">            &lt;div&gt;&lt;img src=<span class="string">"images/P_08.jpg"</span> /&gt;&lt;/div&gt;</div><div class="line">            &lt;div&gt;&lt;img src=<span class="string">"images/P_09.jpg"</span> /&gt;&lt;/div&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">    &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2017/05/11/3种方式实现瀑布流/" class="archive-article-date">
+  	<time datetime="2017-05-11T00:57:15.749Z" itemprop="datePublished"><i class="icon-clock"></i>2017-05-11</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/05/11/Canvas实现百分比圆环滚动/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Canvas实现百分比圆环滚动
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 80Sky
+    	</div>
+      	<div class="footer-right">
+      		Copyright@ by 80Sky
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/"
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/canvas/" style="font-size: 16.67px;">canvas</a> <a href="/tags/css/" style="font-size: 13.33px;">css</a> <a href="/tags/css3/" style="font-size: 16.67px;">css3</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/html5/" style="font-size: 13.33px;">html5</a> <a href="/tags/jQuery/" style="font-size: 10px;">jQuery</a> <a href="/tags/js/" style="font-size: 20px;">js</a> <a href="/tags/面试/" style="font-size: 10px;">面试</a>
+    			</div>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+  			<div class="friends-wrap" id="js-friends">
+  			
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://80sky.github.io/">友情链接1</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://80sky.github.io/">友情链接2</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://80sky.github.io/">友情链接3</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://80sky.github.io/">友情链接4</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://80sky.github.io/">友情链接5</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://80sky.github.io/">友情链接6</a>
+  	        
+  	        </div>
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">QQ296594402&lt;br&gt;&lt;br&gt;裥單嚸&lt;br&gt;裥單生活</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>

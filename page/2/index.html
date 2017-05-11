@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>80Sky</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="前端">
+<meta name="keywords" content="前端,web,js,jquery,javascript,html5,开发者,程序猿,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
+<meta property="og:type" content="website">
+<meta property="og:title" content="80Sky">
+<meta property="og:url" content="http://80sky.github.io/page/2/index.html">
+<meta property="og:site_name" content="80Sky">
+<meta property="og:description" content="前端">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="80Sky">
+<meta name="twitter:description" content="前端">
+  
+    <link rel="alternative" href="/atom.xml" title="80Sky" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/favicon.ico">
+  
+  <script src="/style.js"></script>
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="/images/header.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">80Sky</a></h1>
+		</hgroup>
+
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/resume">简历</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">友链</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="3" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/80sky" title="github">github</a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/" title="weibo">weibo</a>
+		        
+					<a class="rss" target="_blank" href="#" title="rss">rss</a>
+		        
+					<a class="zhihu" target="_blank" href="https://www.zhihu.com/" title="zhihu">zhihu</a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">80Sky</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="/images/header.jpg" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">80Sky</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/resume">简历</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/80sky" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        
+  
+    <article id="post-css3实现圆周运动" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/11/css3实现圆周运动/">css3实现圆周运动</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="第一种方法"><a href="#第一种方法" class="headerlink" title="第一种方法"></a>第一种方法</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line"> &lt;style&gt;</div><div class="line">      .path&#123;</div><div class="line">        width:300px;</div><div class="line">        height:300px;</div><div class="line">        border-radius: 50%;</div><div class="line">        background: <span class="comment">#fb3;</span></div><div class="line">        margin: 50px auto;</div><div class="line">        padding: 20px;</div><div class="line">      &#125;</div><div class="line">      .avatar &#123;</div><div class="line">        width: 50px;</div><div class="line">        height: 50px;</div><div class="line">        margin: 0 auto;</div><div class="line">        border-radius: 50%;</div><div class="line">        overflow: hidden;</div><div class="line">        display: block;</div><div class="line">        background: pink;</div><div class="line">        text-align: center;</div><div class="line">        line-height:50px;</div><div class="line">      &#125;</div><div class="line"></div><div class="line">      @keyframes spin &#123;</div><div class="line">        to &#123;transform: rotate(1turn);&#125;</div><div class="line">      &#125;</div><div class="line"></div><div class="line">      @keyframes spin-reverse &#123;</div><div class="line">        from &#123;transform:rotate(1turn);&#125;</div><div class="line">      &#125;</div><div class="line">      .run&#123;</div><div class="line">        animation: spin 3s infinite linear;</div><div class="line">        transform-origin: 50% 150px;</div><div class="line">      &#125;</div><div class="line">      .run-reverse&#123;</div><div class="line">        animation: spin-reverse 3s infinite linear;</div><div class="line">      &#125;</div><div class="line">&lt;/style&gt;</div><div class="line">&lt;div class=<span class="string">"path"</span>&gt;</div><div class="line">  &lt;div class=<span class="string">"avatar run"</span>&gt;</div><div class="line">    &lt;span class=<span class="string">"run-reverse"</span>&gt;Test&lt;/span&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+        <p class="article-more-link">
+          <a  href="/2017/05/11/css3实现圆周运动/#more">more >></a>
+        </p>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2017/05/11/css3实现圆周运动/" class="archive-article-date">
+  	<time datetime="2017-05-11T00:57:15.781Z" itemprop="datePublished"><i class="icon-clock"></i>2017-05-11</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css3/">css3</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Canvas实现烟花效果" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/11/Canvas实现烟花效果/">Canvas实现烟花特效</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="直接上代码"><a href="#直接上代码" class="headerlink" title="直接上代码"></a>直接上代码</h3>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div></pre></td><td class="code"><pre><div class="line">&lt;!doctype html&gt;</div><div class="line">&lt;html lang=<span class="string">"en"</span>&gt;</div><div class="line"> &lt;head&gt;</div><div class="line">  &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</div><div class="line">  &lt;meta name=<span class="string">"Generator"</span> content=<span class="string">"EditPlus®"</span>&gt;</div><div class="line">  &lt;meta name=<span class="string">"Author"</span> content=<span class="string">""</span>&gt;</div><div class="line">  &lt;meta name=<span class="string">"Keywords"</span> content=<span class="string">""</span>&gt;</div><div class="line">  &lt;meta name=<span class="string">"Description"</span> content=<span class="string">""</span>&gt;</div><div class="line">  &lt;title&gt;Document&lt;/title&gt;</div><div class="line">    &lt;style <span class="built_in">type</span>=<span class="string">"text/css"</span>&gt;</div><div class="line">        *&#123;margin:0;padding:0;&#125;</div><div class="line">    &lt;/style&gt;</div><div class="line"> &lt;/head&gt;</div><div class="line"> &lt;body&gt;</div><div class="line">        </div><div class="line">        &lt;canvas id=<span class="string">"canvas"</span>style=<span class="string">"background:#111"</span>&gt;&lt;/canvas&gt;</div><div class="line">        &lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span>&gt;</div><div class="line">          window.onload = <span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">                var canvas = document.getElementById(<span class="string">'canvas'</span>);</div><div class="line">                var context = canvas.getContext(<span class="string">'2d'</span>);</div><div class="line">                canvas.width = window.innerWidth;</div><div class="line">                canvas.height = window.innerHeight;</div><div class="line">                var cwidth = canvas.width;</div><div class="line">                var cheight = canvas.height;</div><div class="line">                //小球的数量</div><div class="line">                var ballsNum = 200;</div><div class="line">                //装小球的盒子</div><div class="line">                var balls = [];</div><div class="line">                //创建200个小球</div><div class="line">                <span class="keyword">for</span>(var i=0;i&lt;ballsNum;i++)&#123;</div><div class="line">                    var ball = new Ball(10);</div><div class="line">                    ball.x = canvas.width / 2;</div><div class="line">                    ball.y = canvas.height;</div><div class="line">                    ball.vx = Math.random()*2-1</div><div class="line">                    ball.vy = Math.random()*-10-1;</div><div class="line">                    ball.radius = 3;</div><div class="line">                    balls.push(ball);</div><div class="line">                &#125;</div><div class="line">                </div><div class="line">                <span class="keyword">function</span> drawCanvas(ball)&#123;</div><div class="line">                    ball.vy += Math.random() * 0.2;</div><div class="line">                    ball.x += ball.vx;</div><div class="line">                    ball.y += ball.vy;</div><div class="line">                    ball.color = getRandomColor() ;</div><div class="line">                    <span class="keyword">if</span>(ball.y - ball.radius &gt; cheight ||</div><div class="line">                        ball.y + ball.radius &lt; 0 || </div><div class="line">                        ball.x - ball.radius &gt; cwidth || </div><div class="line">                        ball.x + ball.radius &lt; 0</div><div class="line">                    )&#123;</div><div class="line">                        ball.x = canvas.width / 2;</div><div class="line">                        ball.y = canvas.height;</div><div class="line">                        ball.vx = Math.random()*2-1</div><div class="line">                        ball.vy = Math.random()*-10-1;</div><div class="line">                    </div><div class="line">                    &#125;</div><div class="line">                    ball.draw(context)</div><div class="line">                &#125;</div><div class="line"></div><div class="line">                <span class="built_in">set</span>Interval(<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">                    context.clearRect(0,0,cwidth,cheight);</div><div class="line">                    //一次绘制200个小球，并且每个小球都调用draw方法；</div><div class="line">                    /*</div><div class="line">                    <span class="keyword">for</span>(var i=0;i&lt;balls.length;i++)&#123;</div><div class="line">                        drawCanvas(balls[i])</div><div class="line">                    &#125;</div><div class="line">                    */</div><div class="line"></div><div class="line">                    balls.forEach(<span class="keyword">function</span>(obj)&#123;</div><div class="line">                            drawCanvas(obj);</div><div class="line">                    &#125;)</div><div class="line">                &#125;,1000/30)</div><div class="line"></div><div class="line">                /*</div><div class="line">                balls.forEach(<span class="keyword">function</span>(obj)&#123;</div><div class="line">                    context.beginPath();</div><div class="line">                    context.fillStyle = <span class="string">"#f00"</span>;</div><div class="line">                    context.arc(obj.x,obj.y,obj.radius,0,Math.PI*2);</div><div class="line">                    context.fill();</div><div class="line">                &#125;)</div><div class="line">                */</div><div class="line">            &#125;</div><div class="line">            </div><div class="line">            <span class="keyword">function</span> Ball(radius)&#123;</div><div class="line">                this.x = 0;</div><div class="line">                this.y = 0;</div><div class="line">                this.vx = 0;</div><div class="line">                this.vy = 0;</div><div class="line">                this.radius = radius;</div><div class="line">                this.color = <span class="string">"#f00"</span>;</div><div class="line">            &#125;</div><div class="line"></div><div class="line">            //绘制小球</div><div class="line">            Ball.prototype.draw = <span class="keyword">function</span>(context)&#123;</div><div class="line">                    context.beginPath();</div><div class="line">                    context.fillStyle = this.color;</div><div class="line">                    context.arc(this.x,this.y,this.radius,0,Math.PI*2);</div><div class="line">                    context.fill(); </div><div class="line">            &#125;</div><div class="line"></div><div class="line">            <span class="keyword">function</span> <span class="function"><span class="title">getRandomColor</span></span>()&#123;</div><div class="line">                var r = Math.floor(Math.random()*256);</div><div class="line">                var g = Math.floor(Math.random()*256);</div><div class="line">                var b = Math.floor(Math.random()*256);</div><div class="line">                <span class="built_in">return</span> <span class="string">"rgb("</span>+r+<span class="string">","</span>+g+<span class="string">","</span>+b+<span class="string">")"</span>;</div><div class="line">            &#125;</div><div class="line">        &lt;/script&gt;</div><div class="line"> &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2017/05/11/Canvas实现烟花效果/" class="archive-article-date">
+  	<time datetime="2017-05-11T00:57:15.778Z" itemprop="datePublished"><i class="icon-clock"></i>2017-05-11</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/canvas/">canvas</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Canvas实现下落水波特效" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/11/Canvas实现下落水波特效/">Canvas实现下落水波特效</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="直接上代码"><a href="#直接上代码" class="headerlink" title="直接上代码"></a>直接上代码</h3>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div></pre></td><td class="code"><pre><div class="line">&lt;canvas id=<span class="string">"canvas"</span> style=<span class="string">"position: absolute; top: 0px; left: 0px; opacity: 0.58;"</span>&gt;&lt;/canvas&gt;</div><div class="line">&lt;script&gt;</div><div class="line">  var c = document.getElementById(<span class="string">"canvas"</span>);</div><div class="line">  var ctx = c.getContext(<span class="string">"2d"</span>);</div><div class="line">  var w = c.width = window.innerWidth;</div><div class="line">  var h = c.height = window.innerHeight;</div><div class="line">  var clearColor = <span class="string">'rgba(0, 0, 0, 0.1)'</span>;</div><div class="line">  var max = 60;</div><div class="line">  var drops = [];</div><div class="line"></div><div class="line">  <span class="keyword">function</span> random(min, max) &#123;</div><div class="line">      <span class="built_in">return</span> Math.random() * (max - min) + min;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="keyword">function</span> <span class="function"><span class="title">randomColor</span></span>()&#123;</div><div class="line">    var r = Math.floor(Math.random()*256);</div><div class="line">    var g = Math.floor(Math.random()*256);</div><div class="line">    var b = Math.floor(Math.random()*256);</div><div class="line">    <span class="built_in">return</span> <span class="string">"rgb("</span>+r+<span class="string">","</span>+g+<span class="string">","</span>+b+<span class="string">")"</span>;//IE7不支出rgb</div><div class="line">  &#125;;</div><div class="line">  <span class="keyword">function</span> <span class="function"><span class="title">O</span></span>() &#123;&#125;</div><div class="line">    O.prototype = &#123;</div><div class="line">      init: <span class="function"><span class="title">function</span></span>() &#123;</div><div class="line">          this.x = random(0, w);</div><div class="line">          this.y = 0;</div><div class="line">          this.color = randomColor();</div><div class="line">          this.w = 2;</div><div class="line">          this.h = 1;</div><div class="line">          this.vy = random(4, 5);</div><div class="line">          this.vw = 3;</div><div class="line">          this.vh = 1;</div><div class="line">          this.size = 2;</div><div class="line">          this.hit = random(h * .8, h * .9);</div><div class="line">          this.a = 0.5;</div><div class="line">          this.va = .96;</div><div class="line">      &#125;,</div><div class="line">      draw: <span class="function"><span class="title">function</span></span>() &#123;</div><div class="line">        <span class="keyword">if</span> (this.y &gt; this.hit) &#123;</div><div class="line">          ctx.beginPath();</div><div class="line">          ctx.moveTo(this.x, this.y - this.h / 2);</div><div class="line">          ctx.bezierCurveTo(</div><div class="line">            this.x + this.w / 2, this.y - this.h / 2,</div><div class="line">            this.x + this.w / 2, this.y + this.h / 2,</div><div class="line">            this.x, this.y + this.h / 2);</div><div class="line">    </div><div class="line">          ctx.bezierCurveTo(</div><div class="line">            this.x - this.w / 2, this.y + this.h / 2,</div><div class="line">            this.x - this.w / 2, this.y - this.h / 2,</div><div class="line">            this.x, this.y - this.h / 2);</div><div class="line">    </div><div class="line">          ctx.strokeStyle = <span class="string">'hsla(180, 100%, 50%, '</span>+this.a+<span class="string">')'</span>;</div><div class="line">          ctx.stroke();</div><div class="line">          ctx.closePath();</div><div class="line">          </div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">          ctx.fillStyle = this.color;</div><div class="line">          ctx.fillRect(this.x, this.y, this.size, this.size * 5);</div><div class="line">        &#125;</div><div class="line">        this.update();</div><div class="line">      &#125;,</div><div class="line">      update: <span class="function"><span class="title">function</span></span>() &#123;</div><div class="line">        <span class="keyword">if</span>(this.y &lt; this.hit)&#123;</div><div class="line">          this.y += this.vy;</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">          <span class="keyword">if</span>(this.a &gt; .03)&#123;</div><div class="line">            this.w += this.vw;</div><div class="line">            this.h += this.vh;</div><div class="line">            <span class="keyword">if</span>(this.w &gt; 100)&#123;</div><div class="line">              this.a *= this.va;</div><div class="line">              this.vw *= .98;</div><div class="line">              this.vh *= .98;</div><div class="line">            &#125;</div><div class="line">          &#125; <span class="keyword">else</span> &#123;</div><div class="line">            this.init();</div><div class="line">          &#125;</div><div class="line">        &#125;</div><div class="line">        </div><div class="line">      &#125;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="keyword">function</span> <span class="function"><span class="title">resize</span></span>()&#123;</div><div class="line">    w = c.width = window.innerWidth;</div><div class="line">    h = c.height = window.innerHeight;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="keyword">function</span> <span class="function"><span class="title">setup</span></span>()&#123;</div><div class="line">    canvas.style.opacity = <span class="string">"0.58"</span>;</div><div class="line">    <span class="keyword">for</span>(var i = 0; i &lt; max; i++)&#123;</div><div class="line">      (<span class="keyword">function</span>(j)&#123;</div><div class="line">        <span class="built_in">set</span>Timeout(<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">          var o = new O();</div><div class="line">          o.init();</div><div class="line">          drops.push(o);</div><div class="line">        &#125;, j * 100)</div><div class="line">      &#125;(i));</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="keyword">function</span> <span class="function"><span class="title">anim</span></span>() &#123;</div><div class="line">    ctx.fillStyle = clearColor;</div><div class="line">    ctx.fillRect(0,0,w,h);</div><div class="line">    <span class="keyword">for</span>(var i <span class="keyword">in</span> drops)&#123;</div><div class="line">      drops[i].draw();</div><div class="line">    &#125;</div><div class="line">    requestAnimationFrame(anim);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  window.addEventListener(<span class="string">"resize"</span>, resize);</div><div class="line"></div><div class="line">  setup();</div><div class="line">  anim();</div><div class="line"></div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2017/05/11/Canvas实现下落水波特效/" class="archive-article-date">
+  	<time datetime="2017-05-11T00:57:15.776Z" itemprop="datePublished"><i class="icon-clock"></i>2017-05-11</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/canvas/">canvas</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Canvas实现粒子特效 " class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/11/Canvas实现粒子特效 /">Canvas实现粒子特效</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="直接上代码"><a href="#直接上代码" class="headerlink" title="直接上代码"></a>直接上代码</h3>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=<span class="string">"en"</span>&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</div><div class="line">    &lt;title&gt;particle nets&lt;/title&gt;</div><div class="line">    &lt;style&gt;</div><div class="line">        html,body&#123;</div><div class="line">            margin: 0;</div><div class="line">            padding: 0;</div><div class="line">            height: 100%;</div><div class="line">            overflow: hidden;&#125;</div><div class="line">    &lt;/style&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">&lt;canvas id=<span class="string">"cas"</span>&gt;&lt;/canvas&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">    var canvas = document.getElementById(<span class="string">"cas"</span>);</div><div class="line">    var ctx = canvas.getContext(<span class="string">"2d"</span>);</div><div class="line">    resize();</div><div class="line">    window.onresize = resize;</div><div class="line">    <span class="keyword">function</span> <span class="function"><span class="title">resize</span></span>()&#123;</div><div class="line">        canvas.width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;</div><div class="line">        canvas.height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;</div><div class="line">    &#125;</div><div class="line">    var RAF = (<span class="function"><span class="title">function</span></span> () &#123;</div><div class="line">        <span class="built_in">return</span> window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || <span class="keyword">function</span> (callback) &#123;</div><div class="line">                    window.setTimeout(callback, 1000 / 60);</div><div class="line">                &#125;;</div><div class="line">    &#125;)();</div><div class="line">    // 鼠标活动时，获取鼠标坐标</div><div class="line">    var warea = &#123;x: null, y: null, max: 20000&#125;;</div><div class="line">    window.onmousemove = <span class="keyword">function</span>(e)&#123;</div><div class="line">        e = e || window.event;</div><div class="line">        warea.x = e.clientX;</div><div class="line">        warea.y = e.clientY;</div><div class="line">    &#125;;</div><div class="line">    window.onmouseout = <span class="keyword">function</span>(e)&#123;</div><div class="line">        warea.x = null;</div><div class="line">        warea.y = null;</div><div class="line">    &#125;;</div><div class="line">    // 添加粒子</div><div class="line">    // x，y为粒子坐标，xa, ya为粒子xy轴加速度，max为连线的最大距离</div><div class="line">    var dots = [];</div><div class="line">    <span class="keyword">for</span>(var i=0;i&lt;300;i++)&#123;</div><div class="line">        var x = Math.random()*canvas.width;</div><div class="line">        var y = Math.random()*canvas.height;</div><div class="line">        var xa = Math.random() * 2 - 1;</div><div class="line">        var ya = Math.random() * 2 - 1;</div><div class="line">        dots.push(&#123;</div><div class="line">            x: x,</div><div class="line">            y: y,</div><div class="line">            xa: xa,</div><div class="line">            ya: ya,</div><div class="line">            max: 6000</div><div class="line">        &#125;)</div><div class="line">    &#125;</div><div class="line">    // 延迟100秒开始执行动画，如果立即执行有时位置计算会出错</div><div class="line">    <span class="built_in">set</span>Timeout(<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">        animate();</div><div class="line">    &#125;, 100);</div><div class="line">    // 每一帧循环的逻辑</div><div class="line">    <span class="keyword">function</span> <span class="function"><span class="title">animate</span></span>()&#123;</div><div class="line">        ctx.clearRect(0,0,canvas.width, canvas.height);</div><div class="line">        // 将鼠标坐标添加进去，产生一个用于比对距离的点数组</div><div class="line">        var ndots  = [warea].concat(dots);</div><div class="line">        dots.forEach(<span class="keyword">function</span>(dot)&#123;</div><div class="line">            // 粒子位移</div><div class="line">            dot.x += dot.xa;</div><div class="line">            dot.y += dot.ya;</div><div class="line">            // 遇到边界将加速度反向</div><div class="line">            dot.xa *= (dot.x &gt; canvas.width || dot.x &lt; 0)? -1 : 1;</div><div class="line">            dot.ya *= (dot.y &gt; canvas.height || dot.y &lt; 0)? -1 : 1;</div><div class="line">            // 绘制点</div><div class="line">            ctx.fillRect(dot.x - 0.5, dot.y - 0.5, 1, 1);</div><div class="line">            // 循环比对粒子间的距离</div><div class="line">            <span class="keyword">for</span> (var i = 0; i &lt; ndots.length; i++) &#123;</div><div class="line">                var d2 = ndots[i];</div><div class="line">                <span class="keyword">if</span> (dot === d2 || d2.x === null || d2.y === null) <span class="built_in">continue</span>;</div><div class="line">                var xc = dot.x - d2.x;</div><div class="line">                var yc = dot.y - d2.y;</div><div class="line">                // 两个粒子之间的距离</div><div class="line">                var dis = xc * xc + yc * yc;</div><div class="line">                // 距离比</div><div class="line">                var ratio;</div><div class="line">                // 如果两个粒子之间的距离小于粒子对象的max值，则在两个粒子间画线</div><div class="line">                <span class="keyword">if</span>(dis &lt; d2.max)&#123;</div><div class="line">                    // 如果是鼠标，则让粒子向鼠标的位置移动</div><div class="line">                    <span class="keyword">if</span> (d2 === warea &amp;&amp; dis &gt; (d2.max / 2)) &#123;</div><div class="line">                        dot.x -= xc * 0.03;</div><div class="line">                        dot.y -= yc * 0.03;</div><div class="line">                    &#125;</div><div class="line">                    // 计算距离比</div><div class="line">                    ratio = (d2.max - dis) / d2.max;</div><div class="line">                    // 画线</div><div class="line">                    ctx.beginPath();</div><div class="line">                    ctx.lineWidth = ratio/2;</div><div class="line">                    ctx.strokeStyle = <span class="string">'rgba(0,0,0,'</span> + (ratio + 0.2) + <span class="string">')'</span>;</div><div class="line">                    ctx.moveTo(dot.x , dot.y);</div><div class="line">                    ctx.lineTo(d2.x , d2.y);</div><div class="line">                    ctx.stroke();</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">            // 将已经计算过的粒子从数组中删除</div><div class="line">            ndots.splice(ndots.indexOf(dot), 1);</div><div class="line">        &#125;);</div><div class="line">        RAF(animate);</div><div class="line">    &#125;</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2017/05/11/Canvas实现粒子特效 /" class="archive-article-date">
+  	<time datetime="2017-05-11T00:57:15.774Z" itemprop="datePublished"><i class="icon-clock"></i>2017-05-11</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/canvas/">canvas</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Canvas实现黑客帝国" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/11/Canvas实现黑客帝国/">Canvas实现黑客帝国</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="直接上代码"><a href="#直接上代码" class="headerlink" title="直接上代码"></a>直接上代码</h3>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">&lt;meta charset=<span class="string">"utf-8"</span>&gt;</div><div class="line">&lt;meta http-equiv=<span class="string">"X-UA-Compatible"</span> content=<span class="string">"IE=edge,chrome=1"</span>&gt;</div><div class="line">&lt;title&gt;Examples&lt;/title&gt;</div><div class="line">&lt;meta name=<span class="string">"description"</span> content=<span class="string">""</span>&gt;</div><div class="line">&lt;meta name=<span class="string">"keywords"</span> content=<span class="string">""</span>&gt;</div><div class="line">&lt;link href=<span class="string">""</span> rel=<span class="string">"stylesheet"</span>&gt;</div><div class="line">&lt;style&gt;</div><div class="line">    body&#123;padding: 0;margin: 0;overflow: hidden;&#125;</div><div class="line">&lt;/style&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">    &lt;canvas id=<span class="string">'canvas'</span> style=<span class="string">'background:#000'</span>&gt;&lt;/canvas&gt;</div><div class="line">    &lt;script&gt;</div><div class="line">        window.onload = <span class="function"><span class="title">function</span></span> () &#123;</div><div class="line">            var canvas = document.getElementById(<span class="string">'canvas'</span>),</div><div class="line">                    context = canvas.getContext(<span class="string">'2d'</span>),</div><div class="line">                    w,h;</div><div class="line">                    w = canvas.width = window.innerWidth;</div><div class="line">                    h = canvas.height = window.innerHeight;</div><div class="line">            //初始化</div><div class="line">            var clearColor = <span class="string">'rgba(0,0,0,0.1)'</span>,//用于绘制渐变阴影</div><div class="line">                    wordColor = <span class="string">'#33ff33'</span>,//文字颜色</div><div class="line">                    words = <span class="string">"0123456789qwertyuiopasdfghjklzxcvbnm,./;'\[]QWERTYUIOP&#123;&#125;ASDFGHJHJKL:ZXCVBBNM&lt;&gt;?"</span>,</div><div class="line">                    wordsArr = words.split(<span class="string">''</span>),//将文字拆分进一个数组</div><div class="line">                    font_size = 16,//字体大小</div><div class="line">                    clumns = w / font_size, //文字降落的列数</div><div class="line">                    drops = [];</div><div class="line">            <span class="keyword">for</span>(var i=0;i&lt;clumns;i++)&#123;</div><div class="line">                drops[i] = 1;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">function</span> <span class="function"><span class="title">draw</span></span>()&#123;</div><div class="line">                context.save();</div><div class="line">                context.fillStyle = wordColor;</div><div class="line">                context.font = font_size + <span class="string">"px arial"</span>;</div><div class="line">                //核心</div><div class="line">                <span class="keyword">for</span>(var i=0;i&lt;drops.length;i++)&#123;</div><div class="line">                    var text = wordsArr[Math.floor(Math.random() * wordsArr.length)];</div><div class="line">                    context.fillText(text, i * font_size, drops[i] * font_size);</div><div class="line">                    <span class="keyword">if</span>(drops[i] * font_size &gt; h &amp;&amp; Math.random() &gt; 0.98)&#123;</div><div class="line">                        drops[i] = 0;</div><div class="line">                    &#125;</div><div class="line">                    drops[i]++;</div><div class="line">                &#125;</div><div class="line">                 context.restore();</div><div class="line">            &#125;</div><div class="line">            //动画循环</div><div class="line">            (<span class="keyword">function</span> <span class="function"><span class="title">drawFrame</span></span>()&#123;</div><div class="line">                window.requestAnimationFrame(drawFrame);</div><div class="line">                context.fillStyle = clearColor;</div><div class="line">          context.fillRect(0, 0, w, h);</div><div class="line">          draw();</div><div class="line">            &#125;())    </div><div class="line">            //resize</div><div class="line">            <span class="keyword">function</span> <span class="function"><span class="title">resize</span></span>()&#123;</div><div class="line">                 w = canvas.width = window.innerWidth;</div><div class="line">           h = canvas.height = window.innerHeight;``</div><div class="line">            &#125;</div><div class="line">            canvas.addEventListener(<span class="string">"resize"</span>, resize);  </div><div class="line">        &#125;</div><div class="line">    &lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<p>代码有两个比较核心的地方：<br>    1，在初始化部分，我们定义了一个变量clearColor = ‘rgba(0, 0, 0, .1)’,用处就和注释一样，用于绘制阴影，它的主要用处在动画循环部分。原理可以这样理解：我们每画新的一帧，就在上面覆盖一个透明度为0.1的矩形模块，这样就形成了我们看到的阴影，是不是很简单呢？<br>    2，在初始化的注释处和核心模块处，这部分的原理是这样：首先我们设置了每个字体的大小(font_size)，然后，用canvas的宽度除以字体的大小，我们就得到了需要绘制的列数(clumns)， 然后创建了一个数组drops,数组的长度为clumns,并且每个元素的值都为1(drops在这有什么用呢？继续往下看)。</p>
+<p>绘制部分，我们采取的思路是一行一行的绘制，首先在循环中随机的获取文字，在文字绘制API部分注意这行代码：<br>    <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">context.fillText(text, i * font_size, drops[i] * font_size);</div></pre></td></tr></table></figure></p>
+<p>我们知道该API有三个参数，第一个是绘制的文字，第二，三是文字的坐标。在X坐标部分为i <em> font_size，也就是说在循环完成后每个文字的X轴坐标是(0, 16, 32,48…), 而Y坐标为drops[i] </em> font_size由于drops内元素的初始值都为1，所以文字的Y坐标为(16, 16, 16, …),这样我们就相当于先绘制了第一行的文字。那么紧接着我们绘制第二行只需要将drops中的元素加1即可，即(第二行的Y轴坐标为（32，32，32…）)。<br>次类推，我们就绘制了满屏的文字，通过渐变阴影我们就可以看到文字似乎是向下运动的效果。为了让他们看上去运动的速度不一致，我们加上了这行代码：</p>
+   <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (drops[i] * font_size &gt; h &amp;&amp; Math.random() &gt; 0.98)&#123;</div><div class="line">  drops[i] = 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这行代码我们，判断的是当前绘制的这行文字的Y坐标是否超过了canvas的高度，如果超过又从第一行开始绘制，那么如何让他们出现差异性呢！小秘密在Math.random() &gt; 0.98这，if中的两个条件一个是判断文字高度，另一个是判断一个随机数是佛大于0.98，只有当两个条件同时成立才能回到第一行重新绘制。所以，由于第二个条件是随机的，那么差异性就自然而然的出现了！ </p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2017/05/11/Canvas实现黑客帝国/" class="archive-article-date">
+  	<time datetime="2017-05-11T00:57:15.771Z" itemprop="datePublished"><i class="icon-clock"></i>2017-05-11</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/canvas/">canvas</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html5/">html5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Canvas实现百分比圆环滚动" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/11/Canvas实现百分比圆环滚动/">Canvas实现百分比圆环滚动</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="直接上代码"><a href="#直接上代码" class="headerlink" title="直接上代码"></a>直接上代码</h3>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">    &lt;head&gt;</div><div class="line">    &lt;meta charset=<span class="string">"utf-8"</span>&gt;</div><div class="line">    &lt;meta http-equiv=<span class="string">"X-UA-Compatible"</span> content=<span class="string">"IE=edge,chrome=1"</span>&gt;</div><div class="line">    &lt;title&gt;百分比加载&lt;/title&gt;</div><div class="line">    &lt;meta name=<span class="string">"description"</span> content=<span class="string">""</span>&gt;</div><div class="line">    &lt;meta name=<span class="string">"keywords"</span> content=<span class="string">""</span>&gt;</div><div class="line">    &lt;link href=<span class="string">""</span> rel=<span class="string">"stylesheet"</span>&gt;</div><div class="line">    &lt;/head&gt;</div><div class="line">    &lt;body&gt;</div><div class="line">        &lt;canvas id=<span class="string">'canvas'</span> width=<span class="string">'500'</span> height=<span class="string">'500'</span> style=<span class="string">'background:#000;'</span>&gt;&lt;/canvas&gt;</div><div class="line">        &lt;script&gt;</div><div class="line">            window.onload = <span class="function"><span class="title">function</span></span>() &#123;</div><div class="line">                var canvas = document.getElementById(<span class="string">'canvas'</span>),  //获取canvas元素</div><div class="line">                        context = canvas.getContext(<span class="string">'2d'</span>),//获取画图环境，指明为2d</div><div class="line">                        centerX = canvas.width / 2 ,  //Canvas中心点x轴坐标</div><div class="line">                        centerY = canvas.height / 2 , //Canvas中心点y轴坐标</div><div class="line">                        rad = Math.PI * 2 /100, //将360度分成100份，那么每一份就是rad度</div><div class="line">                        speed = 0.1, //加载的快慢就靠它了</div><div class="line">                        pos = 0;</div><div class="line">                    //绘制蓝色外圈</div><div class="line">                <span class="keyword">function</span> blueCircle(n)&#123;</div><div class="line">                    context.save();</div><div class="line">                    context.strokeStyle = <span class="string">'#49f'</span>;   //设置描边样式</div><div class="line">                    context.lineWidth = 5; //设置线宽</div><div class="line">                    context.beginPath();//路径开始</div><div class="line">                    context.arc(centerX,centerY,100,-Math.PI/2,-Math.PI/2 + n * rad,<span class="literal">false</span>);//用于绘制圆弧context.arc(x坐标，y坐标，半径，起始角度，终止角度，顺时针/逆时针)</div><div class="line">                    context.stroke();//绘制</div><div class="line">                    context.closePath(); //路径结束</div><div class="line">                    context.restore();</div><div class="line">                &#125;</div><div class="line">                //绘制白色外圈</div><div class="line">                <span class="keyword">function</span> <span class="function"><span class="title">whiteCircle</span></span>()&#123;</div><div class="line">                    context.save();</div><div class="line">                    context.beginPath();</div><div class="line">                    context.strokeStyle = <span class="string">'white'</span>;</div><div class="line">                    context.arc(centerX,centerX,100,0,Math.PI*2, <span class="literal">false</span>);</div><div class="line">                    context.stroke();</div><div class="line">                    context.closePath();</div><div class="line">                    context.restore();</div><div class="line">                &#125;</div><div class="line">                //百分比文字绘制</div><div class="line">                <span class="keyword">function</span> text(n)&#123;</div><div class="line">                    context.save();//save和restore可以保证样式属性只运用于该段canvas元素</div><div class="line">                    context.strokeStyle = <span class="string">'#49f'</span>; //设置描边样式</div><div class="line">                    context.font = <span class="string">"40px Arial"</span>; //设置字体大小和字体</div><div class="line">                    //绘制字体，并且指定位置</div><div class="line">                    context.textAlign = <span class="string">'center'</span>;</div><div class="line">                    context.textBaseline = <span class="string">'middle'</span>;</div><div class="line">                    context.strokeText(n.toFixed(0)+<span class="string">"%"</span>, centerX, centerY);  </div><div class="line">                    //context.stroke(); //执行绘制</div><div class="line">                    context.restore();</div><div class="line">                &#125;</div><div class="line">                //动画循环</div><div class="line">                (<span class="keyword">function</span> <span class="function"><span class="title">drawFrame</span></span>()&#123;</div><div class="line">                    window.requestAnimationFrame(drawFrame);</div><div class="line">                    context.clearRect(0, 0, canvas.width, canvas.height);</div><div class="line">                    whiteCircle();</div><div class="line">                    text(pos);</div><div class="line">                    blueCircle(pos);</div><div class="line">                    <span class="keyword">if</span>(pos &gt; 100) pos = 0;</div><div class="line">                    pos += speed;</div><div class="line">                &#125;)();</div><div class="line">            &#125;</div><div class="line"></div><div class="line">        &lt;/script&gt;</div><div class="line">    &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2017/05/11/Canvas实现百分比圆环滚动/" class="archive-article-date">
+  	<time datetime="2017-05-11T00:57:15.770Z" itemprop="datePublished"><i class="icon-clock"></i>2017-05-11</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/canvas/">canvas</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html5/">html5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-3种方式实现瀑布流" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/11/3种方式实现瀑布流/">三种方式实现瀑布流</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="第一种javascript实现"><a href="#第一种javascript实现" class="headerlink" title="第一种javascript实现"></a>第一种javascript实现</h3>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div><div class="line">211</div><div class="line">212</div><div class="line">213</div><div class="line">214</div><div class="line">215</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=<span class="string">"en"</span>&gt;</div><div class="line">    &lt;head&gt;</div><div class="line">      &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</div><div class="line">      &lt;title&gt;Title&lt;/title&gt;</div><div class="line">      &lt;style&gt;</div><div class="line">        *&#123;margin: 0;padding: 0&#125;</div><div class="line">        <span class="comment">#main&#123;position: relative&#125;</span></div><div class="line">        .box&#123;padding: 15px 0 0px 15px;<span class="built_in">float</span>: left;&#125;</div><div class="line">        .pic&#123;padding: 10px;border:1px solid <span class="comment">#ccc;box-shadow: 0 0 1px #111&#125;</span></div><div class="line">        .pic img&#123;width: 165px;height: auto;&#125;</div><div class="line">      &lt;/style&gt;</div><div class="line">    &lt;/head&gt;</div><div class="line">    &lt;body&gt;</div><div class="line">      &lt;div id=<span class="string">"main"</span>&gt;</div><div class="line">        &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">          &lt;div class=<span class="string">"pic"</span>&gt;</div><div class="line">            &lt;img src=<span class="string">"images/0.jpg"</span> alt=<span class="string">""</span>&gt;</div><div class="line">          &lt;/div&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">          &lt;div class=<span class="string">"pic"</span>&gt;</div><div class="line">            &lt;img src=<span class="string">"images/1.jpg"</span> alt=<span class="string">""</span>&gt;</div><div class="line">          &lt;/div&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">          &lt;div class=<span class="string">"pic"</span>&gt;</div><div class="line">            &lt;img src=<span class="string">"images/2.jpg"</span> alt=<span class="string">""</span>&gt;</div><div class="line">          &lt;/div&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">          &lt;div class=<span class="string">"pic"</span>&gt;</div><div class="line">            &lt;img src=<span class="string">"images/3.jpg"</span> alt=<span class="string">""</span>&gt;</div><div class="line">          &lt;/div&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">          &lt;div class=<span class="string">"pic"</span>&gt;</div><div class="line">            &lt;img src=<span class="string">"images/4.jpg"</span> alt=<span class="string">""</span>&gt;</div><div class="line">          &lt;/div&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">          &lt;div class=<span class="string">"pic"</span>&gt;</div><div class="line">            &lt;img src=<span class="string">"images/5.jpg"</span> alt=<span class="string">""</span>&gt;</div><div class="line">          &lt;/div&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">          &lt;div class=<span class="string">"pic"</span>&gt;</div><div class="line">            &lt;img src=<span class="string">"images/6.jpg"</span> alt=<span class="string">""</span>&gt;</div><div class="line">          &lt;/div&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">          &lt;div class=<span class="string">"pic"</span>&gt;</div><div class="line">            &lt;img src=<span class="string">"images/7.jpg"</span> alt=<span class="string">""</span>&gt;</div><div class="line">          &lt;/div&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">          &lt;div class=<span class="string">"pic"</span>&gt;</div><div class="line">            &lt;img src=<span class="string">"images/8.jpg"</span> alt=<span class="string">""</span>&gt;</div><div class="line">          &lt;/div&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">          &lt;div class=<span class="string">"pic"</span>&gt;</div><div class="line">            &lt;img src=<span class="string">"images/9.jpg"</span> alt=<span class="string">""</span>&gt;</div><div class="line">          &lt;/div&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">          &lt;div class=<span class="string">"pic"</span>&gt;</div><div class="line">            &lt;img src=<span class="string">"images/10.jpg"</span> alt=<span class="string">""</span>&gt;</div><div class="line">          &lt;/div&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">          &lt;div class=<span class="string">"pic"</span>&gt;</div><div class="line">            &lt;img src=<span class="string">"images/11.jpg"</span> alt=<span class="string">""</span>&gt;</div><div class="line">          &lt;/div&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">          &lt;div class=<span class="string">"pic"</span>&gt;</div><div class="line">            &lt;img src=<span class="string">"images/12.jpg"</span> alt=<span class="string">""</span>&gt;</div><div class="line">          &lt;/div&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">          &lt;div class=<span class="string">"pic"</span>&gt;</div><div class="line">            &lt;img src=<span class="string">"images/13.jpg"</span> alt=<span class="string">""</span>&gt;</div><div class="line">          &lt;/div&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">          &lt;div class=<span class="string">"pic"</span>&gt;</div><div class="line">            &lt;img src=<span class="string">"images/14.jpg"</span> alt=<span class="string">""</span>&gt;</div><div class="line">          &lt;/div&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">          &lt;div class=<span class="string">"pic"</span>&gt;</div><div class="line">            &lt;img src=<span class="string">"images/15.jpg"</span> alt=<span class="string">""</span>&gt;</div><div class="line">          &lt;/div&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">          &lt;div class=<span class="string">"pic"</span>&gt;</div><div class="line">            &lt;img src=<span class="string">"images/16.jpg"</span> alt=<span class="string">""</span>&gt;</div><div class="line">          &lt;/div&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">          &lt;div class=<span class="string">"pic"</span>&gt;</div><div class="line">            &lt;img src=<span class="string">"images/17.jpg"</span> alt=<span class="string">""</span>&gt;</div><div class="line">          &lt;/div&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">          &lt;div class=<span class="string">"pic"</span>&gt;</div><div class="line">            &lt;img src=<span class="string">"images/18.jpg"</span> alt=<span class="string">""</span>&gt;</div><div class="line">          &lt;/div&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">          &lt;div class=<span class="string">"pic"</span>&gt;</div><div class="line">            &lt;img src=<span class="string">"images/19.jpg"</span> alt=<span class="string">""</span>&gt;</div><div class="line">          &lt;/div&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">        &lt;div class=<span class="string">"box"</span>&gt;</div><div class="line">          &lt;div class=<span class="string">"pic"</span>&gt;</div><div class="line">            &lt;img src=<span class="string">"images/20.jpg"</span> alt=<span class="string">""</span>&gt;</div><div class="line">          &lt;/div&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">      &lt;/div&gt;</div><div class="line">      &lt;script&gt;</div><div class="line">        window.onload = <span class="function"><span class="title">function</span></span> () &#123;</div><div class="line">          waterfall(<span class="string">'main'</span>,<span class="string">'box'</span>);</div><div class="line">          var dataInt = &#123;</div><div class="line">            data:[</div><div class="line">              &#123;src:<span class="string">'21.jpg'</span>&#125;,</div><div class="line">              &#123;src:<span class="string">'22.jpg'</span>&#125;,</div><div class="line">              &#123;src:<span class="string">'23.jpg'</span>&#125;,</div><div class="line">              &#123;src:<span class="string">'24.jpg'</span>&#125;</div><div class="line">            ]</div><div class="line">          &#125;;</div><div class="line">          window.onscroll = <span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">            <span class="keyword">if</span>(checkScrollSlide)&#123;</div><div class="line">              var oParent = document.getElementById(<span class="string">'main'</span>);</div><div class="line">              //  讲数据框渲染到页面的尾部</div><div class="line">              <span class="keyword">for</span>(var i=0;i&lt;dataInt.data.length;i++)&#123;</div><div class="line">                var oBox = document.createElement(<span class="string">'div'</span>);</div><div class="line">                oBox.className = <span class="string">'box'</span>;</div><div class="line">                oParent.appendChild(oBox);</div><div class="line">                var oPic = document.createElement(<span class="string">'div'</span>);</div><div class="line">                oPic.className = <span class="string">'pic'</span>;</div><div class="line">                oBox.appendChild(oPic);</div><div class="line">                var oImg = document.createElement(<span class="string">'img'</span>);</div><div class="line">                oImg.src = <span class="string">"images/"</span> + dataInt.data[i].src;</div><div class="line">                oPic.appendChild(oImg);</div><div class="line">              &#125;</div><div class="line">              waterfall(<span class="string">'main'</span>,<span class="string">'box'</span>);</div><div class="line">            &#125;</div><div class="line">          &#125;</div><div class="line">        &#125;;</div><div class="line"></div><div class="line">        <span class="keyword">function</span> waterfall(parent,box)&#123;</div><div class="line">          //讲main下面的所有为box的元素取出来</div><div class="line">          var oParent = document.getElementById(parent);</div><div class="line">          var oBoxs =  getByClass(oParent,box);</div><div class="line">          //计算整个页面显示的列数（页面宽/box宽）</div><div class="line">          var oBoxW = oBoxs[0].offsetWidth;</div><div class="line">          var cols = Math.floor(document.documentElement.clientWidth / oBoxW);</div><div class="line">          //设置main的宽度；</div><div class="line">          oParent.style.cssText = <span class="string">'width:'</span> + oBoxW * cols+<span class="string">'px; margin:0 auto'</span>;</div><div class="line">          var hArr = [];//存放高度的数组</div><div class="line">          <span class="keyword">for</span>(var i=0;i&lt;oBoxs.length;i++)&#123;</div><div class="line">            <span class="keyword">if</span>(i &lt; cols)&#123;</div><div class="line">              hArr.push(oBoxs[i].offsetHeight);</div><div class="line">            &#125;<span class="keyword">else</span>&#123;</div><div class="line">              var minH = Math.min.apply(null,hArr);</div><div class="line">              var index =  getMinhIndex(hArr,minH);</div><div class="line">              oBoxs[i].style.position = <span class="string">'absolute'</span>;</div><div class="line">              oBoxs[i].style.top = minH + <span class="string">'px'</span>;</div><div class="line">              // oBoxs[i].style.left = oBoxW * index + <span class="string">'px'</span>; 两种方式都可以</div><div class="line">              oBoxs[i].style.left = oBoxs[index].offsetLeft + <span class="string">'px'</span>;</div><div class="line">              hArr[index] += oBoxs[i].offsetHeight;</div><div class="line">            &#125;</div><div class="line">          &#125;</div><div class="line"></div><div class="line">          console.log(hArr);</div><div class="line">          console.log(minH);</div><div class="line">          console.log(index);</div><div class="line">        &#125;</div><div class="line"></div><div class="line"></div><div class="line">        //根据class获取元素</div><div class="line">        <span class="keyword">function</span> getByClass(parent,clsName)&#123;</div><div class="line">          var boxArr = [], //用来存储获取所有box的元素</div><div class="line">              oElemts = parent.getElementsByTagName(<span class="string">"*"</span>);</div><div class="line">          <span class="keyword">for</span>(var i=0;i&lt;oElemts.length;i++)&#123;</div><div class="line">            <span class="keyword">if</span>(oElemts[i].className == clsName)&#123;</div><div class="line">              boxArr.push(oElemts[i]);</div><div class="line">            &#125;</div><div class="line">          &#125;</div><div class="line">          <span class="built_in">return</span> boxArr;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        //判断最小高度的索引</div><div class="line">        <span class="keyword">function</span> getMinhIndex(arr,val)&#123;</div><div class="line">          <span class="keyword">for</span>(var i <span class="keyword">in</span> arr)&#123;</div><div class="line">            <span class="keyword">if</span>(arr[i] == val)&#123;</div><div class="line">              <span class="built_in">return</span> i;</div><div class="line">            &#125;</div><div class="line">          &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        //检查是否具备加载数据块条件；</div><div class="line">        <span class="keyword">function</span>  <span class="function"><span class="title">checkScrollSlide</span></span>()&#123;</div><div class="line">          var oParent = document.getElementById(<span class="string">'main'</span>);</div><div class="line">          var oBoxs = getByClass(oParent,<span class="string">'box'</span>);</div><div class="line">          var lastBoxH = oBoxs[oBoxs.length-1].offsetTop + Math.floor(oBoxs[oBoxs.length-1].offsetHeight / 2);</div><div class="line">          var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;</div><div class="line">          var height = document.body.clientHeight || document.documentElement.clientHeight;</div><div class="line">          <span class="built_in">return</span> (lastBoxH&lt;scrollTop+height) ? <span class="literal">true</span> : <span class="literal">false</span>;</div><div class="line">        &#125;</div><div class="line">      &lt;/script&gt;</div><div class="line">    &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+        <p class="article-more-link">
+          <a  href="/2017/05/11/3种方式实现瀑布流/#more">more >></a>
+        </p>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2017/05/11/3种方式实现瀑布流/" class="archive-article-date">
+  	<time datetime="2017-05-11T00:57:15.749Z" itemprop="datePublished"><i class="icon-clock"></i>2017-05-11</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    </nav>
+  
+
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 80Sky
+    	</div>
+      	<div class="footer-right">
+      		Copyright@ by 80Sky
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: true,
+		isPost: false,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/"
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/canvas/" style="font-size: 16.67px;">canvas</a> <a href="/tags/css/" style="font-size: 13.33px;">css</a> <a href="/tags/css3/" style="font-size: 16.67px;">css3</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/html5/" style="font-size: 13.33px;">html5</a> <a href="/tags/jQuery/" style="font-size: 10px;">jQuery</a> <a href="/tags/js/" style="font-size: 20px;">js</a> <a href="/tags/面试/" style="font-size: 10px;">面试</a>
+    			</div>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+  			<div class="friends-wrap" id="js-friends">
+  			
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://80sky.github.io/">友情链接1</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://80sky.github.io/">友情链接2</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://80sky.github.io/">友情链接3</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://80sky.github.io/">友情链接4</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://80sky.github.io/">友情链接5</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://80sky.github.io/">友情链接6</a>
+  	        
+  	        </div>
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">QQ296594402&lt;br&gt;&lt;br&gt;裥單嚸&lt;br&gt;裥單生活</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>
