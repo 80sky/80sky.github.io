@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>日期格式化 | SunnyLi</title>
+    <meta name="description" content="sunny">
+    <link rel="icon" href="/avatar.png">
+    
+    <link rel="preload" href="/assets/css/styles.ac01ddf0.css" as="style"><link rel="preload" href="/assets/js/app.ac01ddf0.js" as="script"><link rel="preload" href="/assets/js/6.1684c599.js" as="script"><link rel="prefetch" href="/assets/css/1.styles.17900781.css"><link rel="prefetch" href="/assets/css/2.styles.a2bd3099.css"><link rel="prefetch" href="/assets/js/1.17900781.js"><link rel="prefetch" href="/assets/js/2.a2bd3099.js"><link rel="prefetch" href="/assets/js/3.d1f0360e.js"><link rel="prefetch" href="/assets/js/4.8eb2b541.js"><link rel="prefetch" href="/assets/js/5.562302f5.js"><link rel="prefetch" href="/assets/js/7.bad4ddb5.js"><link rel="prefetch" href="/assets/js/8.a693fab7.js">
+    <link rel="stylesheet" href="/assets/css/1.styles.17900781.css"><link rel="stylesheet" href="/assets/css/2.styles.a2bd3099.css"><link rel="stylesheet" href="/assets/css/styles.ac01ddf0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">SunnyLi</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">主页</a></div><div class="nav-item"><a href="/web/" class="nav-link router-link-active">博文</a></div><div class="nav-item"><a href="/about/" class="nav-link">关于</a></div><div class="nav-item"><a href="https://github.com/80sky" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">主页</a></div><div class="nav-item"><a href="/web/" class="nav-link router-link-active">博文</a></div><div class="nav-item"><a href="/about/" class="nav-link">关于</a></div><div class="nav-item"><a href="https://github.com/80sky" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first collapsable"><p class="sidebar-heading open"><span>工具类</span> <span class="arrow down"></span></p> <ul class="sidebar-group-items"><li><a href="/web/" class="sidebar-link">一维数组按个数进行拆分</a></li><li><a href="/web/json-tree.html" class="sidebar-link">jQuery 拼接json tree</a></li><li><a href="/web/heightlight.html" class="sidebar-link">搜索关键词高亮</a></li><li><a href="/web/date-format.html" class="active sidebar-link">日期格式化</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/web/date-format.html#日期转农历" class="sidebar-link">日期转农历</a></li></ul></li></ul></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>CANVAS</span> <span class="arrow right"></span></p> <!----></div></li></ul> </div> <div class="page"> <div class="content"><h1 id="日期格式化"><a href="#日期格式化" aria-hidden="true" class="header-anchor">#</a> 日期格式化</h1> <div class="language-bash extra-class"><pre class="language-bash"><code>Date.prototype.format <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>format<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  var <span class="token variable">$1</span>, o <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;M+&quot;</span><span class="token keyword">:</span> this.getMonth<span class="token punctuation">(</span><span class="token punctuation">)</span> + 1,      // 月份，从0开始算
+    <span class="token string">&quot;d+&quot;</span><span class="token keyword">:</span> this.getDate<span class="token punctuation">(</span><span class="token punctuation">)</span>,           // 日期
+    <span class="token string">&quot;h+&quot;</span><span class="token keyword">:</span> this.getHours<span class="token punctuation">(</span><span class="token punctuation">)</span>,          // 小时
+    <span class="token string">&quot;m+&quot;</span><span class="token keyword">:</span> this.getMinutes<span class="token punctuation">(</span><span class="token punctuation">)</span>,        // 分钟
+    <span class="token string">&quot;s+&quot;</span><span class="token keyword">:</span> this.getSeconds<span class="token punctuation">(</span><span class="token punctuation">)</span>,        // 秒钟
+                                    // 季度 quarter
+    <span class="token string">&quot;q+&quot;</span><span class="token keyword">:</span> Math.floor<span class="token punctuation">((</span>this.getMonth<span class="token punctuation">(</span><span class="token punctuation">)</span> + 3<span class="token punctuation">)</span> / 3<span class="token punctuation">)</span>,
+    <span class="token string">&quot;S&quot;</span><span class="token keyword">:</span> this.getMilliseconds<span class="token punctuation">(</span><span class="token punctuation">)</span> // 千秒
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  var key, value<span class="token punctuation">;</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>/<span class="token punctuation">(</span>y+<span class="token punctuation">)</span>/.test<span class="token punctuation">(</span>format<span class="token punctuation">))</span> <span class="token punctuation">{</span>
+    <span class="token variable">$1</span> <span class="token operator">=</span> RegExp.<span class="token variable">$1</span>,
+      <span class="token function">format</span> <span class="token operator">=</span> format.replace<span class="token punctuation">(</span><span class="token variable">$1</span>, String<span class="token punctuation">(</span>this.getFullYear<span class="token punctuation">(</span><span class="token punctuation">))</span>.substr<span class="token punctuation">(</span>4 - <span class="token variable">$1</span><span class="token punctuation">))</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">for</span> <span class="token punctuation">(</span>key <span class="token keyword">in</span> o<span class="token punctuation">)</span> <span class="token punctuation">{</span> // 如果没有指定该参数，则子字符串将延续到 stringvar 的最后。
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>new RegExp<span class="token punctuation">(</span><span class="token string">&quot;(&quot;</span> + key + <span class="token string">&quot;)&quot;</span><span class="token punctuation">)</span>.test<span class="token punctuation">(</span>format<span class="token punctuation">))</span> <span class="token punctuation">{</span>
+      <span class="token variable">$1</span> <span class="token operator">=</span> RegExp.<span class="token variable">$1</span>,
+        value <span class="token operator">=</span> String<span class="token punctuation">(</span>o<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">)</span>,
+        value <span class="token operator">=</span> <span class="token variable">$1</span>.length <span class="token operator">==</span> 1 ? value <span class="token keyword">:</span> <span class="token punctuation">(</span><span class="token string">&quot;00&quot;</span> + value<span class="token punctuation">)</span>.substr<span class="token punctuation">(</span>value.length<span class="token punctuation">)</span>,
+        <span class="token function">format</span> <span class="token operator">=</span> format.replace<span class="token punctuation">(</span><span class="token variable">$1</span>, value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> <span class="token function">format</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h2 id="日期转农历"><a href="#日期转农历" aria-hidden="true" class="header-anchor">#</a> 日期转农历</h2> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token keyword">let</span> CalendarData<span class="token operator">=</span>new Array<span class="token punctuation">(</span>100<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> madd<span class="token operator">=</span>new Array<span class="token punctuation">(</span>12<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> tgString<span class="token operator">=</span><span class="token string">&quot;甲乙丙丁戊己庚辛壬癸&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> dzString<span class="token operator">=</span><span class="token string">&quot;子丑寅卯辰巳午未申酉戌亥&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> numString<span class="token operator">=</span><span class="token string">&quot;一二三四五六七八九十&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> monString<span class="token operator">=</span><span class="token string">&quot;正二三四五六七八九十冬腊&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> weekString<span class="token operator">=</span><span class="token string">&quot;日一二三四五六&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> sx<span class="token operator">=</span><span class="token string">&quot;鼠牛虎兔龙蛇马羊猴鸡狗猪&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> cYear,cMonth,cDay,TheDate<span class="token punctuation">;</span>
+
+CalendarData <span class="token operator">=</span> new Array<span class="token punctuation">(</span>0xA4B,0x5164B,0x6A5,0x6D4,0x415B5,0x2B6,0x957,0x2092F,0x497,0x60C96,0xD4A,0xEA5,0x50DA9,0x5AD,0x2B6,0x3126E, 0x92E,0x7192D,0xC95,0xD4A,0x61B4A,0xB55,0x56A,0x4155B, 0x25D,0x92D,0x2192B,0xA95,0x71695,0x6CA,0xB55,0x50AB5,0x4DA,0xA5B,0x30A57,0x52B,0x8152A,0xE95,0x6AA,0x615AA,0xAB5,0x4B6,0x414AE,0xA57,0x526,0x31D26,0xD95,0x70B55,0x56A,0x96D,0x5095D,0x4AD,0xA4D,0x41A4D,0xD25,0x81AA5,0xB54,0xB6A,0x612DA,0x95B,0x49B,0x41497,0xA4B,0xA164B, 0x6A5,0x6D4,0x615B4,0xAB6,0x957,0x5092F,0x497,0x64B, 0x30D4A,0xEA5,0x80D65,0x5AC,0xAB6,0x5126D,0x92E,0xC96,0x41A95,0xD4A,0xDA5,0x20B55,0x56A,0x7155B,0x25D,0x92D,0x5192B,0xA95,0xB4A,0x416AA,0xAD5,0x90AB5,0x4BA,0xA5B, 0x60A57,0x52B,0xA93,0x40E95<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+madd<span class="token punctuation">[</span>0<span class="token punctuation">]</span><span class="token operator">=</span>0<span class="token punctuation">;</span>
+madd<span class="token punctuation">[</span>1<span class="token punctuation">]</span><span class="token operator">=</span>31<span class="token punctuation">;</span>
+madd<span class="token punctuation">[</span>2<span class="token punctuation">]</span><span class="token operator">=</span>59<span class="token punctuation">;</span>
+madd<span class="token punctuation">[</span>3<span class="token punctuation">]</span><span class="token operator">=</span>90<span class="token punctuation">;</span>
+madd<span class="token punctuation">[</span>4<span class="token punctuation">]</span><span class="token operator">=</span>120<span class="token punctuation">;</span>
+madd<span class="token punctuation">[</span>5<span class="token punctuation">]</span><span class="token operator">=</span>151<span class="token punctuation">;</span>
+madd<span class="token punctuation">[</span>6<span class="token punctuation">]</span><span class="token operator">=</span>181<span class="token punctuation">;</span>
+madd<span class="token punctuation">[</span>7<span class="token punctuation">]</span><span class="token operator">=</span>212<span class="token punctuation">;</span>
+madd<span class="token punctuation">[</span>8<span class="token punctuation">]</span><span class="token operator">=</span>243<span class="token punctuation">;</span>
+madd<span class="token punctuation">[</span>9<span class="token punctuation">]</span><span class="token operator">=</span>273<span class="token punctuation">;</span>
+madd<span class="token punctuation">[</span>10<span class="token punctuation">]</span><span class="token operator">=</span>304<span class="token punctuation">;</span>
+madd<span class="token punctuation">[</span>11<span class="token punctuation">]</span><span class="token operator">=</span>334<span class="token punctuation">;</span>
+
+
+<span class="token keyword">function</span> GetBit<span class="token punctuation">(</span>m,n<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>m<span class="token operator">&gt;&gt;</span>n<span class="token punctuation">)</span><span class="token operator">&amp;</span>1<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+//农历转换
+<span class="token keyword">function</span> e2c<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  TheDate<span class="token operator">=</span> <span class="token punctuation">(</span>arguments.length<span class="token operator">!=</span>3<span class="token punctuation">)</span> ? new Date<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">:</span> new Date<span class="token punctuation">(</span>arguments<span class="token punctuation">[</span>0<span class="token punctuation">]</span>,arguments<span class="token punctuation">[</span>1<span class="token punctuation">]</span>,arguments<span class="token punctuation">[</span>2<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  var total,m,n,k<span class="token punctuation">;</span>
+  var isEnd<span class="token operator">=</span>false<span class="token punctuation">;</span>
+  var tmp<span class="token operator">=</span>TheDate.getYear<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  if<span class="token punctuation">(</span>tmp<span class="token operator">&lt;</span>1900<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    tmp+<span class="token operator">=</span>1900<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  total<span class="token operator">=</span><span class="token punctuation">(</span>tmp-1921<span class="token punctuation">)</span>*365+Math.floor<span class="token variable"><span class="token punctuation">((</span>tmp<span class="token operator">-</span><span class="token number">1921</span><span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token operator">+</span>madd[TheDate.getMonth<span class="token punctuation">(</span><span class="token punctuation">)</span>]<span class="token operator">+</span>TheDate.getDate<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">38</span><span class="token punctuation">;</span>
+
+  if<span class="token punctuation">(</span>TheDate.getYear<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">%</span><span class="token number">4</span><span class="token operator">==</span><span class="token number">0</span><span class="token operator">&amp;&amp;</span>TheDate.getMonth<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&gt;</span><span class="token number">1</span><span class="token punctuation">)</span> {
+    total<span class="token operator">++</span><span class="token punctuation">;</span>
+  }
+  for<span class="token punctuation">(</span>m<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span><span class="token punctuation">;</span>m<span class="token operator">++</span><span class="token punctuation">)</span>{
+    k<span class="token operator">=</span><span class="token punctuation">(</span>CalendarData[m]<span class="token operator">&lt;</span><span class="token number">0xfff</span><span class="token punctuation">)</span><span class="token operator">?</span><span class="token number">11</span><span class="token operator">:</span><span class="token number">12</span><span class="token punctuation">;</span>
+    for<span class="token punctuation">(</span>n<span class="token operator">=</span>k<span class="token punctuation">;</span>n<span class="token operator">&gt;=</span><span class="token number">0</span><span class="token punctuation">;</span>n<span class="token operator">--</span><span class="token punctuation">)</span>{
+      if<span class="token punctuation">(</span>total<span class="token operator">&lt;=</span><span class="token number">29</span><span class="token operator">+</span>GetBit<span class="token punctuation">(</span>CalendarData[m]<span class="token punctuation">,</span>n<span class="token punctuation">))</span></span><span class="token punctuation">{</span>
+        isEnd<span class="token operator">=</span>true<span class="token punctuation">;</span> <span class="token keyword">break</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      total<span class="token operator">=</span>total-29-GetBit<span class="token punctuation">(</span>CalendarData<span class="token punctuation">[</span>m<span class="token punctuation">]</span>,n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    if<span class="token punctuation">(</span>isEnd<span class="token punctuation">)</span> <span class="token keyword">break</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  cYear<span class="token operator">=</span>1921 + m<span class="token punctuation">;</span>
+  cMonth<span class="token operator">=</span>k-n+1<span class="token punctuation">;</span>
+  cDay<span class="token operator">=</span>total<span class="token punctuation">;</span>
+  if<span class="token punctuation">(</span>k<span class="token operator">==</span>12<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    if<span class="token punctuation">(</span>cMonth<span class="token operator">==</span>Math.floor<span class="token punctuation">(</span>CalendarData<span class="token punctuation">[</span>m<span class="token punctuation">]</span>/0x10000<span class="token punctuation">)</span>+1<span class="token punctuation">)</span><span class="token punctuation">{</span>
+      cMonth<span class="token operator">=</span>1-cMonth<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    if<span class="token punctuation">(</span>cMonth<span class="token operator">&gt;</span>Math.floor<span class="token punctuation">(</span>CalendarData<span class="token punctuation">[</span>m<span class="token punctuation">]</span>/0x10000<span class="token punctuation">)</span>+1<span class="token punctuation">)</span><span class="token punctuation">{</span>
+      cMonth--<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> GetcDateString<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  var tmp<span class="token operator">=</span><span class="token string">&quot;&quot;</span><span class="token punctuation">;</span>
+  if<span class="token punctuation">(</span>cMonth<span class="token operator">&lt;</span>1<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    tmp+<span class="token operator">=</span><span class="token string">&quot;(闰)&quot;</span><span class="token punctuation">;</span>
+    tmp+<span class="token operator">=</span>monString.charAt<span class="token punctuation">(</span>-cMonth-1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>else<span class="token punctuation">{</span>
+    tmp+<span class="token operator">=</span>monString.charAt<span class="token punctuation">(</span>cMonth-1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  tmp+<span class="token operator">=</span><span class="token string">&quot;月&quot;</span><span class="token punctuation">;</span>
+  tmp+<span class="token operator">=</span><span class="token punctuation">(</span>cDay<span class="token operator">&lt;</span>11<span class="token punctuation">)</span>?<span class="token string">&quot;初&quot;</span>:<span class="token punctuation">((</span>cDay<span class="token operator">&lt;</span>20<span class="token punctuation">)</span>?<span class="token string">&quot;十&quot;</span>:<span class="token punctuation">((</span>cDay<span class="token operator">&lt;</span>30<span class="token punctuation">)</span>?<span class="token string">&quot;廿&quot;</span><span class="token keyword">:</span><span class="token string">&quot;三十&quot;</span><span class="token punctuation">))</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>cDay%10<span class="token operator">!=</span>0<span class="token operator">||</span>cDay<span class="token operator">==</span>10<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    tmp+<span class="token operator">=</span>numString.charAt<span class="token punctuation">((</span>cDay-1<span class="token punctuation">)</span>%10<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> tmp<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> GetLunarDay<span class="token punctuation">(</span>solarYear,solarMonth,solarDay<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  if<span class="token punctuation">(</span>solarYear<span class="token operator">&lt;</span>1921 <span class="token operator">||</span> solarYear<span class="token operator">&gt;</span>2020<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>else<span class="token punctuation">{</span>
+    solarMonth <span class="token operator">=</span> <span class="token punctuation">(</span>parseInt<span class="token punctuation">(</span>solarMonth<span class="token punctuation">)</span><span class="token operator">&gt;</span>0<span class="token punctuation">)</span> ? <span class="token punctuation">(</span>solarMonth-1<span class="token punctuation">)</span> <span class="token keyword">:</span> 11<span class="token punctuation">;</span>
+    e2c<span class="token punctuation">(</span>solarYear,solarMonth,solarDay<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> GetcDateString<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+/*获取当前农历*/
+<span class="token keyword">function</span> show_lunar_calendar<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">let</span> D<span class="token operator">=</span>new Date<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> yy<span class="token operator">=</span>D.getFullYear<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> mm<span class="token operator">=</span>D.getMonth<span class="token punctuation">(</span><span class="token punctuation">)</span>+1<span class="token punctuation">;</span>
+  <span class="token keyword">let</span> dd<span class="token operator">=</span>D.getDate<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> ww<span class="token operator">=</span>D.getDay<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> ss<span class="token operator">=</span>parseInt<span class="token punctuation">(</span>D.getTime<span class="token punctuation">(</span><span class="token punctuation">)</span> / 1000<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>yy<span class="token operator">&lt;</span>100<span class="token punctuation">)</span> yy<span class="token operator">=</span><span class="token string">&quot;19&quot;</span>+yy<span class="token punctuation">;</span>
+  <span class="token keyword">return</span> GetLunarDay<span class="token punctuation">(</span>yy,mm,dd<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+/*调用农历函数*/
+//let lunarHtml <span class="token operator">=</span><span class="token string">&quot;农历&quot;</span>+ show_lunar_calendar<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">export</span> default <span class="token punctuation">{</span>
+  getLunarDay<span class="token punctuation">(</span>yy,mm,dd<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">'农历'</span> + GetLunarDay<span class="token punctuation">(</span>yy,mm,dd<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <div class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">11/8/2018, 12:45:37 PM</span></div></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/web/heightlight.html" class="prev">
+          搜索关键词高亮
+        </a></span> <!----></p></div> </div> <!----></div></div>
+    <script src="/assets/js/6.1684c599.js" defer></script><script src="/assets/js/app.ac01ddf0.js" defer></script>
+  </body>
+</html>

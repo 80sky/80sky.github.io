@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>搜索关键词高亮 | SunnyLi</title>
+    <meta name="description" content="sunny">
+    <link rel="icon" href="/avatar.png">
+    
+    <link rel="preload" href="/assets/css/styles.ac01ddf0.css" as="style"><link rel="preload" href="/assets/js/app.ac01ddf0.js" as="script"><link rel="preload" href="/assets/js/7.bad4ddb5.js" as="script"><link rel="prefetch" href="/assets/css/1.styles.17900781.css"><link rel="prefetch" href="/assets/css/2.styles.a2bd3099.css"><link rel="prefetch" href="/assets/js/1.17900781.js"><link rel="prefetch" href="/assets/js/2.a2bd3099.js"><link rel="prefetch" href="/assets/js/3.d1f0360e.js"><link rel="prefetch" href="/assets/js/4.8eb2b541.js"><link rel="prefetch" href="/assets/js/5.562302f5.js"><link rel="prefetch" href="/assets/js/6.1684c599.js"><link rel="prefetch" href="/assets/js/8.a693fab7.js">
+    <link rel="stylesheet" href="/assets/css/1.styles.17900781.css"><link rel="stylesheet" href="/assets/css/2.styles.a2bd3099.css"><link rel="stylesheet" href="/assets/css/styles.ac01ddf0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">SunnyLi</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">主页</a></div><div class="nav-item"><a href="/web/" class="nav-link router-link-active">博文</a></div><div class="nav-item"><a href="/about/" class="nav-link">关于</a></div><div class="nav-item"><a href="https://github.com/80sky" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">主页</a></div><div class="nav-item"><a href="/web/" class="nav-link router-link-active">博文</a></div><div class="nav-item"><a href="/about/" class="nav-link">关于</a></div><div class="nav-item"><a href="https://github.com/80sky" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first collapsable"><p class="sidebar-heading open"><span>工具类</span> <span class="arrow down"></span></p> <ul class="sidebar-group-items"><li><a href="/web/" class="sidebar-link">一维数组按个数进行拆分</a></li><li><a href="/web/json-tree.html" class="sidebar-link">jQuery 拼接json tree</a></li><li><a href="/web/heightlight.html" class="active sidebar-link">搜索关键词高亮</a></li><li><a href="/web/date-format.html" class="sidebar-link">日期格式化</a></li></ul></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>CANVAS</span> <span class="arrow right"></span></p> <!----></div></li></ul> </div> <div class="page"> <div class="content"><h1 id="搜索关键词高亮"><a href="#搜索关键词高亮" aria-hidden="true" class="header-anchor">#</a> 搜索关键词高亮</h1> <p>单词组关键词</p> <div class="language-bash extra-class"><pre class="language-bash"><code>  highLightKeywords:function<span class="token punctuation">(</span>text,keywords<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> text.replace<span class="token punctuation">(</span>new RegExp<span class="token punctuation">(</span><span class="token string">&quot;(?![^&amp;;]+;)(?!&lt;[^&lt;&gt;]*)(&quot;</span> + keywords.replace<span class="token punctuation">(</span>/<span class="token punctuation">(</span><span class="token punctuation">[</span>\^\$\<span class="token punctuation">(</span>\<span class="token punctuation">)</span>\<span class="token punctuation">[</span>\<span class="token punctuation">]</span>\<span class="token punctuation">{</span>\<span class="token punctuation">}</span>\*\.\+\?\<span class="token operator">|</span>\\<span class="token punctuation">]</span><span class="token punctuation">)</span>/gi, <span class="token string">&quot;\\<span class="token variable">$1</span>&quot;</span><span class="token punctuation">)</span> + <span class="token string">&quot;)(?![^&lt;&gt;]*&gt;)(?![^&amp;;]+;)&quot;</span>, <span class="token string">&quot;gi&quot;</span><span class="token punctuation">)</span>, <span class="token string">&quot;&lt;span style='color:#c00'&gt;<span class="token variable">$1</span>&lt;/span&gt;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+</code></pre></div><p>多词组关键词</p> <div class="language-bash extra-class"><pre class="language-bash"><code>    <span class="token operator">&lt;</span>div class<span class="token operator">=</span><span class="token string">&quot;result&quot;</span> id<span class="token operator">=</span><span class="token string">&quot;textbox&quot;</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>百度（Nasdaq简称：BIDU）是全球最大的中文搜索引擎，2000年1月由李彦宏、徐勇两人创立于北京中关村，致力于向人们提供“简单，可依赖”的<span class="token operator">&lt;</span>/p<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>信息获取方式。“百度”二字源于中国宋朝词人辛弃疾的《青玉案·元夕》词句“众里寻他千百度”，象征着百度对中文信息检索技术的执著追求。<span class="token operator">&lt;</span>/p<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+    <span class="token keyword">function</span> highlight<span class="token punctuation">(</span>idVal, keyword<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        var textbox <span class="token operator">=</span> document.getElementById<span class="token punctuation">(</span>idVal<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token string">&quot;&quot;</span> <span class="token operator">==</span> keyword<span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
+        //获取所有文字内容 
+        var temp <span class="token operator">=</span> textbox.innerHTML<span class="token punctuation">;</span>
+        console.log<span class="token punctuation">(</span>temp<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        var htmlReg <span class="token operator">=</span> new RegExp<span class="token punctuation">(</span><span class="token string">&quot;\&lt;.*?\&gt;&quot;</span>, <span class="token string">&quot;i&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        var arr <span class="token operator">=</span> new Array<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        //替换HTML标签 
+        <span class="token keyword">for</span> <span class="token punctuation">(</span>var i <span class="token operator">=</span> 0<span class="token punctuation">;</span> <span class="token boolean">true</span><span class="token punctuation">;</span> i++<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            //匹配html标签 
+            var tag <span class="token operator">=</span> htmlReg.exec<span class="token punctuation">(</span>temp<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>tag<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> tag<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            temp <span class="token operator">=</span> temp.replace<span class="token punctuation">(</span>tag, <span class="token string">&quot;{[(&quot;</span> + i + <span class="token string">&quot;)]}&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        // 讲关键词拆分并入数组 
+        words <span class="token operator">=</span> decodeURIComponent<span class="token punctuation">(</span>keyword.replace<span class="token punctuation">(</span>/\,/g, <span class="token string">' '</span><span class="token punctuation">))</span>.split<span class="token punctuation">(</span>/\s+/<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        //替换关键字 
+        <span class="token keyword">for</span> <span class="token punctuation">(</span>w <span class="token operator">=</span> 0<span class="token punctuation">;</span> w <span class="token operator">&lt;</span> words.length<span class="token punctuation">;</span> w++<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            // 匹配关键词，保留关键词中可以出现的特殊字符 
+            var r <span class="token operator">=</span> new RegExp<span class="token punctuation">(</span><span class="token string">&quot;(&quot;</span> + words<span class="token punctuation">[</span>w<span class="token punctuation">]</span>.replace<span class="token punctuation">(</span>/<span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>.+*?^$<span class="token operator">|</span>\\\<span class="token punctuation">[</span>\<span class="token punctuation">]</span><span class="token punctuation">]</span>/g, <span class="token string">&quot;\\$&amp;&quot;</span><span class="token punctuation">)</span> + <span class="token string">&quot;)&quot;</span>, <span class="token string">&quot;ig&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            temp <span class="token operator">=</span> temp.replace<span class="token punctuation">(</span>r, <span class="token string">&quot;&lt;b style='color:Red;'&gt;<span class="token variable">$1</span>&lt;/b&gt;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        //恢复HTML标签 
+        <span class="token keyword">for</span> <span class="token punctuation">(</span>var i <span class="token operator">=</span> 0<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> arr.length<span class="token punctuation">;</span> i++<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            temp <span class="token operator">=</span> temp.replace<span class="token punctuation">(</span><span class="token string">&quot;{[(&quot;</span> + i + <span class="token string">&quot;)]}&quot;</span>, arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        textbox.innerHTML <span class="token operator">=</span> temp<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    highlight<span class="token punctuation">(</span><span class="token string">&quot;textbox&quot;</span>, <span class="token string">&quot;百度,李彦宏&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div></div> <div class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">11/8/2018, 12:45:37 PM</span></div></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/web/json-tree.html" class="prev">
+          jQuery 拼接json tree
+        </a></span> <span class="next"><a href="/web/date-format.html">
+          日期格式化
+        </a>
+        →
+      </span></p></div> </div> <!----></div></div>
+    <script src="/assets/js/7.bad4ddb5.js" defer></script><script src="/assets/js/app.ac01ddf0.js" defer></script>
+  </body>
+</html>
